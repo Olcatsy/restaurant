@@ -1,0 +1,121 @@
+Chilli Restaurant
+
+::::: FONTS :::::
+
+		Headings - Aguafina Script
+
+		Body Copy - Source Sans Pro
+
+		Smallest font size = 14px
+
+		H1 Font Size ("Welcome to Chilli Restaurant") = 72px 
+
+
+::::: COPY - HOME PAGE :::::
+
+	Welcome to Chilli restaurant
+
+	About Us
+
+		Suscipit nisi augue platea et pulvinar conubia pulvinar urna lacinia lectus nostra dictumst, eros ut urna venenatis dui auctor quisque cubilia consequat dictum nec fringilla elementum augue ipsum vulputate nulla quis felis lacus non pretium.
+
+	Specials
+
+		Appetizer - Main - Dessert
+
+		Grilled Quail  $12
+		Stuffed Jalapenos  $8
+		Spicy Quesadillas  $10
+
+		Skirt Steak Tacos  $22
+		Beef Chimichangas  $20
+		Smoky Enchiladas  $26
+
+		Bisochitos  $8
+		Pastel de Tres Leches  $14
+		Giant Churros  $18
+
+	Make Online Reservation
+
+		Booking a table online is easy and takes just a couple of minutes.
+
+	Our Services
+
+		Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+
+	Footer
+
+		Primis orci neque luctus dui justo enim tristique curae, laoreet volutpat aenean purus gravida curae orci eleifend blandit, netus fames aliquam posuere cras quisque mi mollis scelerisque cras dictumst adipiscing class leo nisi curabitur at nam ut in.
+
+		Newsletter - Open Hours - Address
+
+		Doner filet mignon bacon corned beef rump, frankfurter sirloin
+
+		Mondays   Closed
+		Tue-Fri  10am - 12am
+		Sat-Sun  7am - 1am
+		Public Holidays  12pm - 12am
+
+	    1600 Blue Amphitheatre Parkway, 
+		Mountain View, CA 94043, USA
+		(212) 620 5682   -   (375) 620 5682
+		support@nootheme.com
+
+
+::::: COPY - MENU PAGE :::::
+
+	BREAKFAST - LUNCH - DINNER - WINE
+
+	Soupe du jour
+	Courge butternut, coco ............ $38
+
+	Red Mojitos
+	Courge butternut, coco ............ $38
+
+	Smoky Paloma
+	Courge butternut, coco ............ $38
+
+	Sun Coctail
+	Courge butternut, coco ............ $38
+
+
+::::: COPY - EVENTS PAGE :::::
+
+	Inceptos habitant blandit class tempus
+
+	7:00am - 11:15am
+	01 Nov 2015
+	California
+
+	Inceptos habitant blandit class tempus lectus platea diam conubia ante netus consequat pretium aliquam blandit, convallis ultrices ullamcorper semper cubilia etiam sodales donec class sem risus imperdiet curabitur duis eu ultricies tortor malesuada curabitur consectetur odio, taciti praesent lobortis dapibus nibh mollis imperdiet, quis quam volutpat proin ultricies mollis placerat faucibus suspendisse posuere.
+
+	Adipiscing etiam habitant tincidunt rutrum elementum eget nullam et eleifend vivamus integer hendrerit varius et non, rutrum ut aenean egestas dolor imperdiet gravida massa ultrices etiam nec felis vestibulum placerat tortor ornare suspendisse facilisis dolor ac scelerisque potenti, inceptos mattis nibh dolor gravida ante fames netus, gravida eu non blandit iaculis ad lobortis turpis euismod per hendrerit vel fusce nisl amet, at ultrices curabitur tempor primis nunc, class integer potenti etiam hendrerit cubilia.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
