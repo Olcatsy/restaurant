@@ -8,32 +8,57 @@
 	<link href='http://fonts.googleapis.com/css?family=Aguafina+Script' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 
 
-<body>
+<body class="home">
 
 	<!--HEADER-->
-	<header>
+	<header class="header">
 
 		<!--HEADER-top-->
-		<div class="top">
+		<div class="header__top">
 
-			<div class="welcome"></div>
+			<div class="header__welcome">
+				<p class="header__welcome-copy">Welcome to Chili restaurant</p>
+			</div>
 
-			<div class="info"></div>
+			<div class="header__contact">
 
+				<span class="header__contact-item">
+					<img class="header__icon" src="assets\top-nav\icon-phone.png" alt="">
+					(00) 123 456 789
+				</span>
+
+				<span class="header__contact-item">
+					<img class="header__icon" src="assets\top-nav\icon-email.png" alt="">
+					info@namecompany.com
+				</span>
+
+				<button class="header__contact-button">
+					<img class="header__icon" src="assets\top-nav\icon-magnifying-glass.png" alt="">
+				</button>
+
+			</div>
 		</div>
 
 		<!--HEADER-bottom-->
-		<div class="bottom">
+		<div class="header__bottom">
 
-			<div class="logo-container"></div>
+			<div class="header__logo-container">
+				<img class="header__logo" src="assets\chilli-logo.png" alt="">
+			</div>
 
-			<div class="nav"></div>
+			<nav class="header__nav">
+				<ul>
+					<li class="header__nav-item"><a class="header__nav-link" href="#">home</a></li>
+					<li class="header__nav-item"><a class="header__nav-link" href="#">menu</a></li>
+					<li class="header__nav-item"><a class="header__nav-link" href="#">events</a></li>
+					<li class="header__nav-item"><a class="header__nav-link" href="#">contact</a></li>
+				</ul>
+			</nav>
 
 		</div>
 	</header>
@@ -45,8 +70,24 @@
 		<!--HERO -->
 		<section class="hero">
 
-			<div class="headline-container">
+			<div class="hero__headline-container">
+				<img class="hero__headline-item" src="assets\home\since-1987.png" alt="Since 1987">
 
+				<div class="hero__headline-item">
+					<p class="hero__title">Welcome to Chilli restaurant</p>
+				</div>
+
+				<div class="hero__headline-item">
+					<span class="hero__dash"></span>
+					<p class="hero__subtitle">Coffee</p>
+					<img class="hero__star" src="assets\home\white-star.png" alt="">
+					<p class="hero__subtitle">bar</p>
+					<img class="hero__star" src="assets\home\white-star.png" alt="">
+					<p class="hero__subtitle">restaurant</p>
+					<span class="hero__dash"></span>
+				</div>
+
+				<img class="hero__headline-item" src="assets\home\silver-spring.png" alt="Silver spring, MD">
 			</div>
 
 		</section>
@@ -54,12 +95,24 @@
 
 		<!--ABOUT -->
 		<section class="about">
-			
+
+			<div class="about__left">
+
+			</div>
+
+			<div class="about__right">
+				<img class="about__img" src="assets\home\about-chilli.jpg" alt="">
+			</div>
+
 		</section>
 
 
 		<!--SPECIALS -->
-		<section class="specials"></section>
+		<section class="specials">
+
+
+
+		</section>
 
 
 		<!--RESERVATIONS -->
