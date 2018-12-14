@@ -1,3 +1,73 @@
 .header {
-  
+  width: 100%;
+  position: absolute;
+  top: 0;
+
+  &__outer-container {
+
+  }
+
+  /* HEADER - Top */
+  &__top {
+    @extend %flexbox-row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $black;
+    color: $light-grey;
+    }
+
+  &__contact-item {
+    padding: 0 20px;
+  }
+
+  &__icon {
+    /*change this to match font size*/
+    height: 13px;
+    position: relative;
+    bottom: -1px;
+    padding: 0 6px;
+  }
+
+  &__contact-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  /* HEADER - Bottom */
+  &__bottom {
+    @extend %flexbox-row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $black-transparent;
+    color: $white;
+    padding: 20px 0;
+  }
+
+  &__nav-list {
+    padding: 0;
+  }
+
+  &__nav-item {
+    display: inline-block;
+  }
+
+  &__nav-link {
+    @extend %uppercase;
+    color: $white;
+    text-decoration: none; /*remove this when using normalize.scss*/
+    padding: 0 15px;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:active {
+      color: $dark-red;
+    }
+  }
+
+
 }

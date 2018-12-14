@@ -1,2 +1,13 @@
 @import 'normalize';
+@import 'helpers/mixins';
+@import 'helpers/placeholders';
+@import 'helpers/variables';
+
+@import 'components/typography';
+
+
 @import 'layout/header';
+@import 'layout/home';
+@import 'layout/menu';
+@import 'layout/events';
+@import 'layout/footer';

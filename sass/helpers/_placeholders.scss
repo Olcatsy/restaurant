@@ -1,0 +1,17 @@
+%flexbox-row {
+  display: flex;
+  flex-direction: row
+}
+
+%flexbox-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%capitalize {
+  text-transform: capitalize;
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
