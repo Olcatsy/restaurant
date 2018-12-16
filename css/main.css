@@ -413,3 +413,13 @@ body {
       color: #ff524d; }
     .header__nav-link:active {
       color: #ad0600; }
+
+/* 1. HERO */
+.hero {
+  background-image: url("../../assets/home/restaurant-hero-bg.jpg");
+  background-size: cover; }
+
+/* 2. ABOUT */
+/* 3. SPECIALS */
+/* 4. RESERVATIONS */
+/* 5. SERVICES */
