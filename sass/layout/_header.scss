@@ -4,13 +4,15 @@
   top: 0;
 
   &__outer-container {
-
+    @extend %outer-container;
+    @extend %flexbox-row;
+    justify-content: space-between;
   }
 
   /* HEADER - Top */
   &__top {
-    @extend %flexbox-row;
-    justify-content: space-between;
+    /*@extend %flexbox-row;
+    justify-content: space-between;*/
     align-items: center;
     background-color: $black;
     color: $light-grey;
@@ -38,12 +40,12 @@
 
   /* HEADER - Bottom */
   &__bottom {
-    @extend %flexbox-row;
-    justify-content: space-between;
+    /*@extend %flexbox-row;
+    justify-content: space-between;*/
     align-items: center;
     background-color: $black-transparent;
     color: $white;
-    padding: 20px 0;
+    padding: 15px 0;
   }
 
   &__nav-list {

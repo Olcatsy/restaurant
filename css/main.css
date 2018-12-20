@@ -358,16 +358,32 @@ td,
 th {
   padding: 0; }
 
-.header__top, .header__bottom {
+.header__outer-container, .hero__subhead-container {
   display: flex;
   flex-direction: row; }
 
-.header__nav-link {
+.hero {
+  display: flex;
+  flex-direction: column; }
+
+.header__nav-link, .hero__subhead {
   text-transform: uppercase; }
 
-body {
+.header__outer-container, .hero__outer-container {
+  margin: auto;
+  max-width: 1000px;
+  /*padding-left:20px;
+  padding-right:20px;*/ }
+
+/* COLORS */
+html, body {
   font-family: Source Sans Pro, sans-serif;
   font-size: 14px; }
+
+.home .hero__headline {
+  font-family: Aguafina Script;
+  font-size: 72px;
+  font-weight: 500; }
 
 .header {
   width: 100%;
@@ -375,8 +391,11 @@ body {
   top: 0;
   /* HEADER - Top */
   /* HEADER - Bottom */ }
+  .header__outer-container {
+    justify-content: space-between; }
   .header__top {
-    justify-content: space-between;
+    /*@extend %flexbox-row;
+    justify-content: space-between;*/
     align-items: center;
     background-color: black;
     color: #cfcfcf; }
@@ -395,11 +414,12 @@ body {
     min-width: 50px;
     min-height: 50px; }
   .header__bottom {
-    justify-content: space-between;
+    /*@extend %flexbox-row;
+    justify-content: space-between;*/
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 20px 0; }
+    padding: 15px 0; }
   .header__nav-list {
     padding: 0; }
   .header__nav-item {
@@ -416,8 +436,37 @@ body {
 
 /* 1. HERO */
 .hero {
-  background-image: url("../../assets/home/restaurant-hero-bg.jpg");
-  background-size: cover; }
+  background-image: url("../assets/home/restaurant-hero-bg.jpg");
+  background-size: cover;
+  height: 70vh;
+  color: white;
+  align-content: center;
+  text-align: center;
+  /* HERO - Date */
+  /* HERO - Headline */
+  /* HERO - Subhead */
+  /* HERO - Location */ }
+  .hero__inner-container {
+    margin-bottom: -105px; }
+  .hero__date {
+    margin-bottom: 30px; }
+  .hero__headline {
+    margin: 0; }
+  .hero__subhead-container {
+    align-items: center;
+    justify-content: center; }
+  .hero__subhead-item {
+    margin: 0 10px; }
+  .hero__dash {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background-color: white; }
+  .hero__star {
+    width: 17px;
+    height: 17px; }
+  .hero__location {
+    margin-top: 30px; }
 
 /* 2. ABOUT */
 /* 3. SPECIALS */

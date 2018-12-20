@@ -1,7 +1,68 @@
 /* 1. HERO */
 .hero {
-  background-image: url('../../assets/home/restaurant-hero-bg.jpg');
+  background-image: url('../assets/home/restaurant-hero-bg.jpg');
   background-size: cover;
+  height: 70vh;
+  color: white;
+
+  @extend %flexbox-column;
+  align-content: center;
+  text-align: center;
+
+  &__outer-container {
+    @extend %outer-container;
+  }
+
+  &__inner-container {
+    margin-bottom: -105px;
+  }
+  
+  /* HERO - Date */
+  &__date {
+    margin-bottom: 30px;
+  }
+
+  /* HERO - Headline */
+  &__headline {
+    margin: 0;
+  }
+
+
+  /* HERO - Subhead */
+  &__subhead-container {
+    @extend %flexbox-row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__subhead {
+    @extend %uppercase;
+  }
+
+  &__subhead-item {
+    margin: 0 10px;
+  }
+
+  &__dash {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background-color: $white;
+  }
+
+  &__star {
+    width: 17px;
+    height: 17px;
+  }
+
+  /* HERO - Location */
+  &__location {
+    margin-top: 30px;
+  }
+
+
+
+
 }
 
 

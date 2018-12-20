@@ -1,4 +1,12 @@
-body {
+html, body {
   font-family: Source Sans Pro, sans-serif;
   font-size: 14px;
+}
+
+.home {
+  .hero__headline {
+    font-family: Aguafina Script;
+    font-size: 72px;
+    font-weight: 500;
+  }
 }
