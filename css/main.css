@@ -358,22 +358,27 @@ td,
 th {
   padding: 0; }
 
-.header__outer-container, .hero__subhead-container {
+.header__outer-container, .hero__subhead-container, .about__outer-container {
   display: flex;
   flex-direction: row; }
 
-.hero {
+.hero, .about__left {
   display: flex;
   flex-direction: column; }
 
 .header__nav-link, .hero__subhead {
   text-transform: uppercase; }
 
-.header__outer-container, .hero__outer-container {
+.header__outer-container, .hero__outer-container, .about__outer-container {
   margin: auto;
   max-width: 1000px;
   /*padding-left:20px;
   padding-right:20px;*/ }
+
+.hero, .about__left {
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
 
 /* COLORS */
 html, body {
@@ -382,8 +387,11 @@ html, body {
 
 .home .hero__headline {
   font-family: Aguafina Script;
-  font-size: 72px;
+  font-size: 5rem;
   font-weight: 500; }
+
+.home .hero__subhead {
+  font-size: 1.2rem; }
 
 .header {
   width: 100%;
@@ -440,8 +448,8 @@ html, body {
   background-size: cover;
   height: 70vh;
   color: white;
-  align-content: center;
-  text-align: center;
+  /*align-content: center;
+  text-align: center;*/
   /* HERO - Date */
   /* HERO - Headline */
   /* HERO - Subhead */
@@ -469,6 +477,16 @@ html, body {
     margin-top: 30px; }
 
 /* 2. ABOUT */
+.about {
+  background-color: white;
+  /* ABOUT - Left */ }
+  .about__outer-container {
+    padding: 50px; }
+  .about__left {
+    margin-right: 10px; }
+  .about__right {
+    margin-left: 10px; }
+
 /* 3. SPECIALS */
 /* 4. RESERVATIONS */
 /* 5. SERVICES */

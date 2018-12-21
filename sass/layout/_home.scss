@@ -6,8 +6,9 @@
   color: white;
 
   @extend %flexbox-column;
-  align-content: center;
-  text-align: center;
+  @extend %centered-text;
+  /*align-content: center;
+  text-align: center;*/
 
   &__outer-container {
     @extend %outer-container;
@@ -16,7 +17,7 @@
   &__inner-container {
     margin-bottom: -105px;
   }
-  
+
   /* HERO - Date */
   &__date {
     margin-bottom: 30px;
@@ -59,19 +60,33 @@
   &__location {
     margin-top: 30px;
   }
-
-
-
-
 }
 
 
 
-
-
-
 /* 2. ABOUT */
+.about {
+  background-color: $white;
 
+  &__outer-container {
+    @extend %outer-container;
+    @extend %flexbox-row;
+    padding: 50px;
+  }
+
+  /* ABOUT - Left */
+  &__left {
+    @extend %flexbox-column;
+    @extend %centered-text;
+
+    margin-right: 10px;
+  }
+
+  &__right {
+    margin-left: 10px;
+  }
+
+}
 
 
 

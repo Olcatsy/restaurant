@@ -6,7 +6,11 @@ html, body {
 .home {
   .hero__headline {
     font-family: Aguafina Script;
-    font-size: 72px;
+    font-size: 5rem;
     font-weight: 500;
+  }
+
+  .hero__subhead {
+    font-size: 1.2rem;
   }
 }
