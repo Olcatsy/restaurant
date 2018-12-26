@@ -112,9 +112,8 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
 
 /**
  * Address styling not present in IE 8/9.
@@ -358,7 +357,7 @@ td,
 th {
   padding: 0; }
 
-.header__outer-container, .hero__subhead-container, .about__outer-container {
+.header__outer-container, .hero__subhead-container, .about__outer-container, .specials__inner-container, .specials__course-inner {
   display: flex;
   flex-direction: row; }
 
@@ -369,15 +368,17 @@ th {
 .header__nav-link, .hero__subhead {
   text-transform: uppercase; }
 
-.header__outer-container, .hero__outer-container, .about__outer-container {
+.header__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container {
   margin: auto;
   max-width: 1000px;
   /*padding-left:20px;
   padding-right:20px;*/ }
 
-.hero, .about__left {
+.hero, .about__left, .specials__outer-container {
   justify-content: center;
-  align-items: center;
+  align-items: center; }
+
+.hero, .about__left {
   text-align: center; }
 
 /* COLORS */
@@ -448,8 +449,6 @@ html, body {
   background-size: cover;
   height: 70vh;
   color: white;
-  /*align-content: center;
-  text-align: center;*/
   /* HERO - Date */
   /* HERO - Headline */
   /* HERO - Subhead */
@@ -479,14 +478,38 @@ html, body {
 /* 2. ABOUT */
 .about {
   background-color: white;
-  /* ABOUT - Left */ }
+  /* ABOUT - Left */
+  /*It's probably best to turn this into a mixin */
+  /* ABOUT - Right */ }
   .about__outer-container {
     padding: 50px; }
   .about__left {
-    margin-right: 10px; }
+    margin-right: 20px; }
+  .about__underline {
+    margin: 20px auto; }
+  .about__title {
+    margin-bottom: 20px; }
   .about__right {
-    margin-left: 10px; }
+    margin-left: 20px; }
+  .about_img {
+    max-width: 456px; }
 
 /* 3. SPECIALS */
+.specials {
+  background-color: #e6e6e6;
+  background-image: "../assets/home/specials-border.png";
+  /* SPECIALS - Cutlery background ARGHHH*/
+  /*&__cutlery {
+    height: 255px;
+    background-image: ('..\assets\home\cutlery.png');
+    background-color: $lightest-grey;
+  }*/ }
+  .specials__outer-container {
+    display: flex; }
+
 /* 4. RESERVATIONS */
+.reservations {
+  background-color: black;
+  color: white; }
+
 /* 5. SERVICES */

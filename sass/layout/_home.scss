@@ -6,9 +6,8 @@
   color: white;
 
   @extend %flexbox-column;
+  @extend %centered-flex;
   @extend %centered-text;
-  /*align-content: center;
-  text-align: center;*/
 
   &__outer-container {
     @extend %outer-container;
@@ -77,32 +76,72 @@
   /* ABOUT - Left */
   &__left {
     @extend %flexbox-column;
+    @extend %centered-flex;
     @extend %centered-text;
 
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
-  &__right {
-    margin-left: 10px;
+  /*It's probably best to turn this into a mixin */
+  &__underline {
+    margin: 20px auto;
   }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  /* ABOUT - Right */
+  &__right {
+    margin-left: 20px;
+  }
+
+  &_img {
+    max-width: 456px;
+  }
+}
+
+
+
+/* 3. SPECIALS */
+.specials {
+  background-color: $lightest-grey;
+  background-image: ('../assets/home/specials-border.png');
+
+  &__outer-container {
+    @extend %outer-container;
+    display: flex;
+    @extend %centered-flex;
+  }
+
+  &__inner-container {
+    @extend %flexbox-row;
+  }
+
+  &__course-inner {
+    @extend %flexbox-row;
+  }
+
+  /* SPECIALS - Cutlery background ARGHHH*/
+  /*&__cutlery {
+    height: 255px;
+    background-image: ('..\assets\home\cutlery.png');
+    background-color: $lightest-grey;
+  }*/
 
 }
 
 
 
-
-
-
-/* 3. SPECIALS */
-
-
-
-
-
-
-
 /* 4. RESERVATIONS */
+.reservations {
+  background-color: $black;
+  color: $white;
 
+  &__outer-container {
+    @extend %outer-container;
+  }
+}
 
 
 
