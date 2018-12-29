@@ -357,18 +357,21 @@ td,
 th {
   padding: 0; }
 
-.header__outer-container, .hero__subhead-container, .about__outer-container, .specials__inner-container, .specials__course-inner {
+.header__outer-container, .hero__subhead-container, .about__outer-container, .specials__inner-container, .specials__course-inner, .reservations__form {
   display: flex;
   flex-direction: row; }
 
-.hero, .about__left {
+.banner, .hero, .about__left {
   display: flex;
   flex-direction: column; }
 
-.header__nav-link, .hero__subhead {
+.specials__dish {
+  text-transform: capitalize; }
+
+.header__nav-link, .hero__subhead, .specials__course-title, .specials__button {
   text-transform: uppercase; }
 
-.header__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container {
+.banner__outer-container, .header__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container {
   margin: auto;
   max-width: 1000px;
   /*padding-left:20px;
@@ -378,10 +381,14 @@ th {
   justify-content: center;
   align-items: center; }
 
-.hero, .about__left {
+.banner, .hero, .about__left, .specials__title {
   text-align: center; }
 
+.banner__underline, .about__underline {
+  margin: 20px auto; }
+
 /* COLORS */
+/* BACKGROUND */
 html, body {
   font-family: Source Sans Pro, sans-serif;
   font-size: 14px; }
@@ -393,6 +400,16 @@ html, body {
 
 .home .hero__subhead {
   font-size: 1.2rem; }
+
+.banner {
+  background-image: url(../assets/reso-background.jpg);
+  background-position: center;
+  color: white;
+  height: 40vh; }
+  .banner__outer-container {
+    margin-bottom: 60px; }
+  .banner__links {
+    display: block; }
 
 .header {
   width: 100%;
@@ -485,8 +502,6 @@ html, body {
     padding: 50px; }
   .about__left {
     margin-right: 20px; }
-  .about__underline {
-    margin: 20px auto; }
   .about__title {
     margin-bottom: 20px; }
   .about__right {
@@ -497,19 +512,45 @@ html, body {
 /* 3. SPECIALS */
 .specials {
   background-color: #e6e6e6;
-  background-image: "../assets/home/specials-border.png";
   /* SPECIALS - Cutlery background ARGHHH*/
   /*&__cutlery {
     height: 255px;
     background-image: ('..\assets\home\cutlery.png');
-    background-color: $lightest-grey;
+
   }*/ }
   .specials__outer-container {
-    display: flex; }
+    display: flex;
+    padding: 20px 50px; }
+  .specials__menu {
+    width: 100%;
+    /* ???? */
+    background-image: "../assets/home/specials-border.png"; }
+  .specials__inner-container {
+    justify-content: space-between;
+    padding: 50px 0;
+    margin: auto;
+    width: 80%; }
+  .specials__course-inner {
+    padding-top: 20px; }
+  .specials__course-left {
+    margin-right: 35px; }
+  .specials__button {
+    display: block;
+    margin: auto; }
 
 /* 4. RESERVATIONS */
 .reservations {
-  background-color: black;
+  background-image: url(../assets/reso-background.jpg);
+  background-position: center;
   color: white; }
+  .reservations__title, .reservations__copy {
+    color: white; }
+  .reservations__form {
+    color: black;
+    outline: none;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .reservations__field {
+    width: 33%; }
 
 /* 5. SERVICES */

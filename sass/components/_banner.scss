@@ -1,0 +1,23 @@
+.banner {
+  background-image: $dark-background;
+  background-position: center;
+  color: $white;
+  height: 40vh;
+
+  @extend %flexbox-column;
+  @extend %centered-text;
+
+
+  &__outer-container {
+    @extend %outer-container;
+    margin-bottom: 60px;
+  }
+
+  &__underline {
+    @extend %underline;
+  }
+
+  &__links {
+    display: block;
+  }
+}

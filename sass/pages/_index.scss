@@ -84,7 +84,7 @@
 
   /*It's probably best to turn this into a mixin */
   &__underline {
-    margin: 20px auto;
+    @extend %underline;
   }
 
   &__title {
@@ -106,27 +106,61 @@
 /* 3. SPECIALS */
 .specials {
   background-color: $lightest-grey;
-  background-image: ('../assets/home/specials-border.png');
+
 
   &__outer-container {
     @extend %outer-container;
     display: flex;
     @extend %centered-flex;
+    padding: 20px 50px;
+  }
+
+  &__menu {
+    width: 100%;
+    /* ???? */
+    background-image: ('../assets/home/specials-border.png');
+  }
+
+  &__title {
+    @extend %centered-text;
   }
 
   &__inner-container {
     @extend %flexbox-row;
+    justify-content: space-between;
+    padding: 50px 0;
+    margin: auto;
+    width: 80%;
+  }
+
+  &__course-title {
+    @extend %uppercase;
   }
 
   &__course-inner {
     @extend %flexbox-row;
+    padding-top: 20px;
+  }
+
+  &__course-left {
+    margin-right: 35px;
+  }
+
+  &__dish {
+    @extend %capitalize;
+  }
+
+  &__button {
+    display: block;
+    margin: auto;
+    @extend %uppercase;
   }
 
   /* SPECIALS - Cutlery background ARGHHH*/
   /*&__cutlery {
     height: 255px;
     background-image: ('..\assets\home\cutlery.png');
-    background-color: $lightest-grey;
+
   }*/
 
 }
@@ -135,12 +169,30 @@
 
 /* 4. RESERVATIONS */
 .reservations {
-  background-color: $black;
+  background-image: $dark-background;
+  background-position: center;
   color: $white;
 
   &__outer-container {
     @extend %outer-container;
   }
+
+  &__title, &__copy {
+    color: $white;
+  }
+
+  &__form {
+    color: $black;
+    outline: none;
+    @extend %flexbox-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__field {
+    width: 33%;
+  }
+
 }
 
 
