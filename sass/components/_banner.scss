@@ -10,7 +10,7 @@
 
   &__outer-container {
     @extend %outer-container;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   &__underline {
@@ -20,4 +20,20 @@
   &__links {
     display: block;
   }
+
+  &__link {
+    color: $white;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    /* turn into mixin for link hovers*/
+    &:hover {
+      color: $red;
+    }
+
+    &:active {
+      color: $dark-red;
+    }
+  }
+
 }

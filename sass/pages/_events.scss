@@ -1,0 +1,68 @@
+.event {
+
+  &__outer-container {
+    @extend %outer-container;
+    padding: 60px 80px;
+  }
+
+  &__img {
+    width: 100%;
+    margin: auto;
+  }
+
+  /* Main post */
+  &__post {
+    margin: 50px 0;
+    text-align: center;
+  }
+
+  &__post-title {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+
+  &__post-info {
+    margin: 20px auto;
+    letter-spacing: 1px;
+  }
+
+  &__post-info, &__info-element {
+    @extend %flexbox-row;
+    justify-content: center;
+    align-items: end;
+  }
+
+  &__info-element {
+    margin: 0 10px;
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &__underline {
+    @extend %underline;
+  }
+
+  /* Line height should be a Typography mixin */
+  &__copy {
+    margin: 30px 0;
+    line-height: 1.5em;
+  }
+
+  /* End of Main post */
+
+  &__buttons {
+    @extend %flexbox-row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__button {
+    @include button(black-outline);
+  }
+
+
+
+}

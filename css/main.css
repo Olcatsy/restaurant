@@ -357,7 +357,7 @@ td,
 th {
   padding: 0; }
 
-.header__outer-container, .hero__subhead-container, .about__outer-container, .specials__inner-container, .specials__course-inner, .reservations__form {
+.header__outer-container, .hero__subhead-container, .about__outer-container, .specials__inner-container, .specials__course-inner, .reservations__form, .event__post-info, .event__info-element, .event__buttons {
   display: flex;
   flex-direction: row; }
 
@@ -368,10 +368,10 @@ th {
 .specials__dish {
   text-transform: capitalize; }
 
-.header__nav-link, .hero__subhead, .specials__course-title, .specials__button {
+.header__nav-link, .hero__subhead, .specials__course-title, .specials__button, .event__button {
   text-transform: uppercase; }
 
-.banner__outer-container, .header__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container {
+.banner__outer-container, .header__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container, .event__outer-container {
   margin: auto;
   max-width: 1000px;
   /*padding-left:20px;
@@ -384,7 +384,7 @@ th {
 .banner, .hero, .about__left, .specials__title {
   text-align: center; }
 
-.banner__underline, .about__underline {
+.banner__underline, .about__underline, .event__underline {
   margin: 20px auto; }
 
 /* COLORS */
@@ -401,15 +401,25 @@ html, body {
 .home .hero__subhead {
   font-size: 1.2rem; }
 
+/* can use the following synthax to write class-names  */
 .banner {
   background-image: url(../assets/reso-background.jpg);
   background-position: center;
   color: white;
   height: 40vh; }
   .banner__outer-container {
-    margin-bottom: 60px; }
+    margin-bottom: 40px; }
   .banner__links {
     display: block; }
+  .banner__link {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* turn into mixin for link hovers*/ }
+    .banner__link:hover {
+      color: #ff524d; }
+    .banner__link:active {
+      color: #ad0600; }
 
 .header {
   width: 100%;
@@ -418,7 +428,8 @@ html, body {
   /* HEADER - Top */
   /* HEADER - Bottom */ }
   .header__outer-container {
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
   .header__top {
     /*@extend %flexbox-row;
     justify-content: space-between;*/
@@ -454,7 +465,8 @@ html, body {
     color: white;
     text-decoration: none;
     /*remove this when using normalize.scss*/
-    padding: 0 15px; }
+    padding: 0 15px;
+    /* turn into mixin for link hovers*/ }
     .header__nav-link:hover {
       color: #ff524d; }
     .header__nav-link:active {
@@ -475,10 +487,15 @@ html, body {
   .hero__date {
     margin-bottom: 30px; }
   .hero__headline {
-    margin: 0; }
+    margin: 0;
+    font-family: Aguafina Script;
+    font-size: 5rem;
+    font-weight: 500; }
   .hero__subhead-container {
     align-items: center;
     justify-content: center; }
+  .hero__subhead {
+    font-size: 1.2rem; }
   .hero__subhead-item {
     margin: 0 10px; }
   .hero__dash {
@@ -554,3 +571,42 @@ html, body {
     width: 33%; }
 
 /* 5. SERVICES */
+.event {
+  /* Main post */
+  /* Line height should be a Typography mixin */
+  /* End of Main post */ }
+  .event__outer-container {
+    padding: 60px 80px; }
+  .event__img {
+    width: 100%;
+    margin: auto; }
+  .event__post {
+    margin: 50px 0;
+    text-align: center; }
+  .event__post-title {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight: 600; }
+  .event__post-info {
+    margin: 20px auto;
+    letter-spacing: 1px; }
+  .event__post-info, .event__info-element {
+    justify-content: center;
+    align-items: end; }
+  .event__info-element {
+    margin: 0 10px; }
+  .event__icon {
+    margin-right: 5px; }
+  .event__copy {
+    margin: 30px 0;
+    line-height: 1.5em; }
+  .event__buttons {
+    justify-content: space-between;
+    margin-top: 20px; }
+  .event__button {
+    outline: none;
+    background-color: transparent;
+    border: 3px solid black;
+    color: black;
+    font-weight: 700;
+    padding: 8px 40px; }

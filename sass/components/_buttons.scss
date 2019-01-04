@@ -1,0 +1,13 @@
+@mixin button($button-type) {
+  @if $button-type == black-outline {
+    outline: none;
+    background-color: transparent;
+    border: 3px solid black;
+    color: black;
+    font-weight: 700;
+    @extend %uppercase;
+    padding: 8px 40px;
+  }
+
+  
+}

@@ -7,6 +7,7 @@
     @extend %outer-container;
     @extend %flexbox-row;
     justify-content: space-between;
+    align-items: center;
   }
 
   /* HEADER - Top */
@@ -62,6 +63,7 @@
     text-decoration: none; /*remove this when using normalize.scss*/
     padding: 0 15px;
 
+    /* turn into mixin for link hovers*/
     &:hover {
       color: $red;
     }
