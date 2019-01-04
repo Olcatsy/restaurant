@@ -614,4 +614,13 @@ html, body {
     border: 3px solid black;
     color: black;
     font-weight: 700;
-    padding: 8px 40px; }
+    padding: 8px 40px;
+    position: relative; }
+    .event__button:hover {
+      color: #ff524d;
+      border-color: #ff524d; }
+    .event__button:active {
+      color: #ad0600;
+      border-color: #ad0600;
+      top: 1px;
+      left: 1px; }

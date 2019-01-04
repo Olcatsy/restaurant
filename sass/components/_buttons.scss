@@ -7,7 +7,20 @@
     font-weight: 700;
     @extend %uppercase;
     padding: 8px 40px;
+    position: relative;
+
+    &:hover {
+      color: $red;
+      border-color: $red;
+    }
+
+    &:active {
+      color: $dark-red;
+      border-color: $dark-red;
+      top: 1px;
+      left: 1px;
+    }
   }
 
-  
+
 }
