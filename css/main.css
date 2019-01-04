@@ -409,6 +409,11 @@ html, body {
   height: 40vh; }
   .banner__outer-container {
     margin-bottom: 40px; }
+  .banner__title {
+    font-family: Aguafina Script;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: -20px; }
   .banner__links {
     display: block; }
   .banner__link {
@@ -585,7 +590,7 @@ html, body {
     text-align: center; }
   .event__post-title {
     margin-bottom: 20px;
-    font-size: 1.3em;
+    font-size: 1.8rem;
     font-weight: 600; }
   .event__post-info {
     margin: 20px auto;
