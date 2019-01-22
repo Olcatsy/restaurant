@@ -1,0 +1,148 @@
+
+.footer {
+  width: 100%;
+  /*position: absolute;
+  bottom: 0;*/
+
+  &__outer-container {
+    @extend %outer-container;
+  }
+
+  &__copy {
+    color: $light-grey;
+  }
+
+  /* TOP */
+  &__top {
+    background: $dark-background;
+    color: white;
+
+
+    @extend %flexbox-row;
+    @extend %centered-flex;
+    @extend %centered-text;
+
+    &-copy {
+      text-align: justify;
+    }
+  }
+
+  &__top &__outer-container {
+    padding: 45px 150px;
+  }
+  /* End of TOP */
+
+
+  /* MIDDLE */
+  &__middle {
+    background-color: $dark-grey;
+    color: $light-grey;
+  }
+
+  &__middle &__outer-container {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+  }
+
+  &__column-title {
+    grid-area: header;
+    margin-bottom: 15px;
+
+  }
+
+  /* MIDDLE - Newsletter */
+  &__newsletter {
+    display: grid;
+    grid-template-rows: 25% repeat(2, 1fr);
+    grid-template-areas: "header";
+
+    &-field {
+      border: none;
+      padding: 10px;
+      width: 80%;
+      border: 1px solid transparent;
+      color: $dark-grey;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $hover-red;
+
+      }
+    }
+
+    &-button {
+      width: 19%;
+      @include button(red-button);
+      padding: 11px;
+      margin-left: -3px;
+
+
+    }
+  }
+
+
+
+
+  /* MIDDLE - Hours */
+  &__hours {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 25% auto;
+    grid-template-areas: "header header";
+
+    & p:nth-of-type(even) {
+      justify-self: end;
+      color: white;
+      font-weight: 600;
+    }
+  }
+
+  /* MIDDLE - Address */
+  &__address {
+    display: grid;
+    grid-template-columns: 15px auto;
+    grid-template-rows: 25% auto;
+    grid-template-areas: "header header";
+    column-gap: 10px;
+  }
+  /* End of MIDDLE */
+
+
+  /* BOTTOM */
+  &__bottom {
+    background: $dark-background;
+  }
+
+  &__copyright {
+    color: $light-grey;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+
+    &-link {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+  &__social {
+    margin: auto;
+
+    @extend %flexbox-row;
+    @extend %centered-flex;
+
+    &-button {
+      width: 50px;
+      height: 50px;
+      background-color: $black;
+      border-radius: 50%;
+      border: none;
+      margin: 5px;
+
+    }
+  }
+  /* End of BOTTOM */
+}

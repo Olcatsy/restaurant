@@ -1,12 +1,14 @@
 /* COLORS */
-
 $black: hsla(0,0,00,1);
-$black-transparent: hsla(0,0,0,0.7);
-$light-grey: hsla(0,0,81,1);
-$lightest-grey: (#e6e6e6);
-$white: hsla(0,0,100,1);
-$red: hsla(2, 100, 65, 1);
-$dark-red: hsla(2, 100, 34, 1);
+$black-transparent: hsla(0,0,0,0.4);
+$light-grey: #f2f2f2;
+$dark-grey: #1a1a1a;
+$white: #fff;
+$red: #ff524d;
+$hover-red: #E82923;
+$active-red: #FF2D26;
+$dark-red: #ad0600;
+
 
 /* BACKGROUND */
 $dark-background: url(../assets/reso-background.jpg);

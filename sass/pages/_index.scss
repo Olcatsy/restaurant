@@ -1,6 +1,6 @@
 /* 1. HERO */
 .hero {
-  background-image: url('../assets/home/restaurant-hero-bg.jpg');
+  background: url('../assets/home/restaurant-hero-bg.jpg') fixed;
   background-size: cover;
   height: 70vh;
   color: white;
@@ -108,7 +108,7 @@
 
 /* 3. SPECIALS */
 .specials {
-  background-color: $lightest-grey;
+  background-color: $light-grey;
 
 
   &__outer-container {
@@ -172,8 +172,8 @@
 
 /* 4. RESERVATIONS */
 .reservations {
-  background-image: $dark-background;
-  background-position: center;
+  background: $dark-background no-repeat center;
+  /*background-position: center;*/
   color: $white;
 
   &__outer-container {

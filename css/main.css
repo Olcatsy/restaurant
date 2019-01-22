@@ -357,7 +357,8 @@ td,
 th {
   padding: 0; }
 
-.header__outer-container, .hero__subhead-container, .about__outer-container, .specials__inner-container, .specials__course-inner, .reservations__form, .event__post-info, .event__info-element, .event__buttons {
+/* FLEXBOX */
+.header__outer-container, .footer__top, .footer__social, .hero__subhead-container, .about__outer-container, .specials__inner-container, .specials__course-inner, .reservations__form, .event__post-info, .event__info-element, .event__buttons {
   display: flex;
   flex-direction: row; }
 
@@ -365,24 +366,26 @@ th {
   display: flex;
   flex-direction: column; }
 
+/* TYPOGRAPHY */
 .specials__dish {
   text-transform: capitalize; }
 
 .header__nav-link, .hero__subhead, .specials__course-title, .specials__button, .event__button {
   text-transform: uppercase; }
 
-.banner__outer-container, .header__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container, .event__outer-container {
+.banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container, .event__outer-container {
   margin: auto;
   max-width: 1000px;
   /*padding-left:20px;
   padding-right:20px;*/ }
 
-.hero, .about__left, .specials__outer-container {
+/* POSITIONING */
+.banner, .footer__top, .hero, .about__left, .specials__title {
+  text-align: center; }
+
+.footer__top, .footer__social, .hero, .about__left, .specials__outer-container {
   justify-content: center;
   align-items: center; }
-
-.banner, .hero, .about__left, .specials__title {
-  text-align: center; }
 
 .banner__underline, .about__underline, .event__underline {
   margin: 20px auto; }
@@ -393,19 +396,9 @@ html, body {
   font-family: Source Sans Pro, sans-serif;
   font-size: 14px; }
 
-.home .hero__headline {
-  font-family: Aguafina Script;
-  font-size: 5rem;
-  font-weight: 500; }
-
-.home .hero__subhead {
-  font-size: 1.2rem; }
-
-/* can use the following synthax to write class-names  */
 .banner {
-  background-image: url(../assets/reso-background.jpg);
-  background-position: center;
-  color: white;
+  background: url(../assets/reso-background.jpg) fixed center;
+  color: #fff;
   height: 40vh; }
   .banner__outer-container {
     margin-bottom: 40px; }
@@ -417,7 +410,7 @@ html, body {
   .banner__links {
     display: block; }
   .banner__link {
-    color: white;
+    color: #fff;
     margin-left: 10px;
     margin-right: 10px;
     /* turn into mixin for link hovers*/ }
@@ -440,7 +433,7 @@ html, body {
     justify-content: space-between;*/
     align-items: center;
     background-color: black;
-    color: #cfcfcf; }
+    color: #f2f2f2; }
   .header__contact-item {
     padding: 0 20px; }
   .header__icon {
@@ -459,15 +452,15 @@ html, body {
     /*@extend %flexbox-row;
     justify-content: space-between;*/
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
     padding: 15px 0; }
   .header__nav-list {
     padding: 0; }
   .header__nav-item {
     display: inline-block; }
   .header__nav-link {
-    color: white;
+    color: #fff;
     text-decoration: none;
     /*remove this when using normalize.scss*/
     padding: 0 15px;
@@ -477,9 +470,106 @@ html, body {
     .header__nav-link:active {
       color: #ad0600; }
 
+.footer {
+  width: 100%;
+  /*position: absolute;
+  bottom: 0;*/
+  /* TOP */
+  /* End of TOP */
+  /* MIDDLE */
+  /* MIDDLE - Newsletter */
+  /* MIDDLE - Hours */
+  /* MIDDLE - Address */
+  /* End of MIDDLE */
+  /* BOTTOM */
+  /* End of BOTTOM */ }
+  .footer__copy {
+    color: #f2f2f2; }
+  .footer__top {
+    background: url(../assets/reso-background.jpg);
+    color: white; }
+    .footer__top-copy {
+      text-align: justify; }
+  .footer__top .footer__outer-container {
+    padding: 45px 150px; }
+  .footer__middle {
+    background-color: #1a1a1a;
+    color: #f2f2f2; }
+  .footer__middle .footer__outer-container {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px; }
+  .footer__column-title {
+    grid-area: header;
+    margin-bottom: 15px; }
+  .footer__newsletter {
+    display: grid;
+    grid-template-rows: 25% repeat(2, 1fr);
+    grid-template-areas: "header"; }
+    .footer__newsletter-field {
+      border: none;
+      padding: 10px;
+      width: 80%;
+      border: 1px solid transparent;
+      color: #1a1a1a;
+      transition: all 0.3s ease; }
+      .footer__newsletter-field:focus {
+        outline: none;
+        border: 1px solid #E82923; }
+    .footer__newsletter-button {
+      width: 19%;
+      outline: none;
+      background-color: #ff524d;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      transition: all 0.1s ease;
+      padding: 11px;
+      margin-left: -3px; }
+      .footer__newsletter-button:hover {
+        background-color: #E82923; }
+      .footer__newsletter-button:active {
+        background-color: #FF2D26;
+        padding-left: 16px; }
+  .footer__hours {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 25% auto;
+    grid-template-areas: "header header"; }
+    .footer__hours p:nth-of-type(even) {
+      justify-self: end;
+      color: white;
+      font-weight: 600; }
+  .footer__address {
+    display: grid;
+    grid-template-columns: 15px auto;
+    grid-template-rows: 25% auto;
+    grid-template-areas: "header header";
+    column-gap: 10px; }
+  .footer__bottom {
+    background: url(../assets/reso-background.jpg); }
+  .footer__copyright {
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px; }
+    .footer__copyright-link {
+      text-decoration: none;
+      color: #fff; }
+  .footer__social {
+    margin: auto; }
+    .footer__social-button {
+      width: 50px;
+      height: 50px;
+      background-color: black;
+      border-radius: 50%;
+      border: none;
+      margin: 5px; }
+
 /* 1. HERO */
 .hero {
-  background-image: url("../assets/home/restaurant-hero-bg.jpg");
+  background: url("../assets/home/restaurant-hero-bg.jpg") fixed;
   background-size: cover;
   height: 70vh;
   color: white;
@@ -507,7 +597,7 @@ html, body {
     display: block;
     width: 25px;
     height: 1px;
-    background-color: white; }
+    background-color: #fff; }
   .hero__star {
     width: 17px;
     height: 17px; }
@@ -516,7 +606,7 @@ html, body {
 
 /* 2. ABOUT */
 .about {
-  background-color: white;
+  background-color: #fff;
   /* ABOUT - Left */
   /*It's probably best to turn this into a mixin */
   /* ABOUT - Right */ }
@@ -533,7 +623,7 @@ html, body {
 
 /* 3. SPECIALS */
 .specials {
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
   /* SPECIALS - Cutlery background ARGHHH*/
   /*&__cutlery {
     height: 255px;
@@ -562,11 +652,11 @@ html, body {
 
 /* 4. RESERVATIONS */
 .reservations {
-  background-image: url(../assets/reso-background.jpg);
-  background-position: center;
-  color: white; }
+  background: url(../assets/reso-background.jpg) no-repeat center;
+  /*background-position: center;*/
+  color: #fff; }
   .reservations__title, .reservations__copy {
-    color: white; }
+    color: #fff; }
   .reservations__form {
     color: black;
     outline: none;
@@ -615,12 +705,12 @@ html, body {
     color: black;
     font-weight: 700;
     padding: 8px 40px;
-    position: relative; }
+    position: relative;
+    transition: all 0.3s ease; }
     .event__button:hover {
-      color: #ff524d;
-      border-color: #ff524d; }
+      color: #E82923;
+      border-color: #E82923; }
     .event__button:active {
       color: #ad0600;
       border-color: #ad0600;
-      top: 1px;
-      left: 1px; }
+      left: 2px; }

@@ -1,3 +1,4 @@
+/* FLEXBOX */
 %flexbox-row {
   display: flex;
   flex-direction: row
@@ -8,6 +9,10 @@
   flex-direction: column;
 }
 
+
+
+
+/* TYPOGRAPHY */
 %capitalize {
   text-transform: capitalize;
 }
@@ -23,13 +28,15 @@
   padding-right:20px;*/
 }
 
+
+/* POSITIONING */
+%centered-text {
+  text-align: center;
+}
+
 %centered-flex {
   justify-content: center;
   align-items: center;
-}
-
-%centered-text {
-  text-align: center;
 }
 
 %underline {
