@@ -358,7 +358,7 @@ th {
   padding: 0; }
 
 /* FLEXBOX */
-.header__outer-container, .footer__top, .footer__social, .hero__subhead-container, .about__outer-container, .specials__inner-container, .specials__course-inner, .reservations__form, .event__post-info, .event__info-element, .event__buttons {
+.header__outer-container, .footer__top, .footer__social, .hero__subhead-container, .about__outer-container, .specials__inner-container, .specials__course-inner, .reservations__form, .menu-section__menu-list, .menu-section__gallery, .event__post-info, .event__info-element, .event__buttons {
   display: flex;
   flex-direction: row; }
 
@@ -367,13 +367,13 @@ th {
   flex-direction: column; }
 
 /* TYPOGRAPHY */
-.specials__dish {
+.specials__dish, .menu-section__copy--big {
   text-transform: capitalize; }
 
-.header__nav-link, .hero__subhead, .specials__course-title, .specials__button, .event__button {
+.header__nav-link, .hero__subhead, .specials__course-title, .specials__button, .menu-section__title, .event__button {
   text-transform: uppercase; }
 
-.banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container, .event__outer-container {
+.banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container, .menu-section__outer-container, .event__outer-container {
   margin: auto;
   max-width: 1000px;
   /*padding-left:20px;
@@ -666,6 +666,31 @@ html, body {
     width: 33%; }
 
 /* 5. SERVICES */
+.menu-section {
+  /*This implements the layout using Flexbox */
+  /* GALLERY */
+  /* End of GALLERY */ }
+  .menu-section__outer-container {
+    padding: 60px 0;
+    /*display: grid;
+    grid-template-columns: repeat(3, auto 1fr 3fr);
+    grid-template-rows: repeat(5, 1fr);*/ }
+  .menu-section__title {
+    margin: 15px 0; }
+  .menu-section__menu-list {
+    justify-content: space-between; }
+  .menu-section__copy--big {
+    font-size: 1.4em;
+    margin-top: 20px; }
+  .menu-section__copy {
+    padding-left: 5px;
+    font-style: italic; }
+  .menu-section__gallery {
+    width: 100vw;
+    align-items: baseline; }
+  .menu-section__img {
+    width: 25%; }
+
 .event {
   /* Main post */
   /* Line height should be a Typography mixin */
