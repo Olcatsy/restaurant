@@ -25,6 +25,10 @@
     &-copy {
       text-align: justify;
     }
+
+    & * {
+      padding: 10px 0;
+    }
   }
 
   &__top &__outer-container {

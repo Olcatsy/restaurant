@@ -13,10 +13,7 @@
   }
 
   &__title {
-    font-family: Aguafina Script;
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: -20px;
+    @extend %title;
   }
 
   &__underline {

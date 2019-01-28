@@ -85,13 +85,13 @@
     margin-right: 20px;
   }
 
-  /*It's probably best to turn this into a mixin */
   &__underline {
     @extend %underline;
+    margin: 20px auto;
   }
 
   &__title {
-    margin-bottom: 20px;
+    @extend %title;
   }
 
   /* ABOUT - Right */
@@ -109,62 +109,71 @@
 /* 3. SPECIALS */
 .specials {
   background-color: $light-grey;
-
+  padding-top: 40px;
 
   &__outer-container {
     @extend %outer-container;
-    display: flex;
-    @extend %centered-flex;
-    padding: 20px 50px;
-  }
+    height: 69vh;
 
-  &__menu {
-    width: 100%;
-    /* ???? */
-    background-image: ('../assets/home/specials-border.png');
+    background-image: url('../assets/home/specials-border.png');
+    background-size: 100% 69vh;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__title {
+    @extend %title;
     @extend %centered-text;
   }
 
-  &__inner-container {
-    @extend %flexbox-row;
-    justify-content: space-between;
-    padding: 50px 0;
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 100px;
+
+    padding: 60px 0;
     margin: auto;
-    width: 80%;
+    width: 75%;
   }
 
-  &__course-title {
-    @extend %uppercase;
-  }
+  &__course {
+    display: grid;
+    grid-template-columns: auto 10%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "title title";
+    grid-row-gap: 40px;
 
-  &__course-inner {
-    @extend %flexbox-row;
-    padding-top: 20px;
-  }
+    &-title {
+      @extend %uppercase;
+      grid-area: title;
+      justify-self: center;
+    }
 
-  &__course-left {
-    margin-right: 35px;
-  }
+    &-dish {
+      margin-right: 35px;
+      @extend %capitalize;
+    }
 
-  &__dish {
-    @extend %capitalize;
+    &-price {
+      font-style: italic;
+    }
   }
 
   &__button {
     display: block;
     margin: auto;
-    @extend %uppercase;
+
+    @include button(black-outline);
   }
 
-  /* SPECIALS - Cutlery background ARGHHH*/
-  /*&__cutlery {
+  /* SPECIALS - Cutlery background*/
+  &__cutlery {
+    @extend %outer-container;
     height: 255px;
-    background-image: ('..\assets\home\cutlery.png');
+    background: url('../assets/home/cutlery.png') center;
+    background-size: contain;
 
-  }*/
+  }
 
 }
 
@@ -182,6 +191,10 @@
 
   &__title, &__copy {
     color: $white;
+  }
+
+  &__title {
+    @extend %title;
   }
 
   &__form {
