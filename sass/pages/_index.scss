@@ -116,9 +116,8 @@
     height: 69vh;
 
     background-image: url('../assets/home/specials-border.png');
-    background-size: 100% 69vh;
+    background-size: 100% 65vh;
     background-repeat: no-repeat;
-    background-position: center;
   }
 
   &__title {
@@ -169,9 +168,11 @@
   /* SPECIALS - Cutlery background*/
   &__cutlery {
     @extend %outer-container;
-    height: 255px;
-    background: url('../assets/home/cutlery.png') center;
+    height: 210px;
+    background-image: url('../assets/home/cutlery.png');
     background-size: contain;
+    background-position-x: 100px;
+    background-repeat: no-repeat;
 
   }
 
@@ -181,9 +182,11 @@
 
 /* 4. RESERVATIONS */
 .reservations {
-  background: $dark-background no-repeat center;
-  /*background-position: center;*/
+  background: $dark-background no-repeat;
+  background-size: cover;
   color: $white;
+  padding: 45px 0;
+  text-align: center;
 
   &__outer-container {
     @extend %outer-container;
@@ -197,24 +200,92 @@
     @extend %title;
   }
 
+  &__underline {
+    @extend %underline;
+  }
+
   &__form {
-    color: $black;
-    outline: none;
     @extend %flexbox-row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 40px 0;
   }
 
   &__field {
-    width: 33%;
+    color: $black;
+    font-style: italic;
+    padding: 10px;
+
+    outline: none;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $hover-red;
+    }
   }
 
+  &__button {
+    @include button(red-button);
+    @extend %capitalize;
+    padding: 5px 50px;
+    width: 22%;
+  }
 }
 
 
 
-
-
-
-
 /* 5. SERVICES */
+.services {
+  padding: 45px 0;
+  text-align: center;
+  background-color: $light-grey;
+
+  &__outer-container {
+    @extend %outer-container;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__underline {
+    @extend %underline;
+  }
+
+  &__copy {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  &__inner-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 15px;
+  }
+
+  &__item {
+    background-color: white;
+    height: 130px;
+    margin-top: 100px;
+
+    &-icon {
+      position: relative;
+      bottom: 65px;
+    }
+
+    &-title {
+      position: relative;
+      bottom: 50px;
+
+      @extend %uppercase;
+    }
+
+  }
+
+
+
+
+
+}

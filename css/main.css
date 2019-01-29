@@ -367,13 +367,13 @@ th {
   flex-direction: column; }
 
 /* TYPOGRAPHY */
-.specials__course-dish, .menu-section__copy--big {
+.specials__course-dish, .reservations__button, .menu-section__copy--big {
   text-transform: capitalize; }
 
-.header__nav-link, .hero__subhead, .specials__course-title, .specials__button, .menu-section__title, .event__button {
+.header__nav-link, .hero__subhead, .specials__course-title, .specials__button, .services__item-title, .menu-section__title, .event__button {
   text-transform: uppercase; }
 
-.banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .menu-section__outer-container, .event__outer-container {
+.banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
   margin: auto;
   max-width: 1000px;
   /* I left this for mobile version
@@ -388,8 +388,8 @@ th {
   justify-content: center;
   align-items: center; }
 
-.banner__underline, .about__underline, .event__underline {
-  margin: 0 auto 20px auto; }
+.banner__underline, .about__underline, .reservations__underline, .services__underline, .event__underline {
+  margin: 0 auto 15px auto; }
 
 /* COLORS */
 /* BACKGROUND */
@@ -397,7 +397,7 @@ html, body {
   font-family: Source Sans Pro, sans-serif;
   font-size: 14px; }
 
-.banner__title, .about__title, .specials__title, .reservations__title {
+.banner__title, .about__title, .specials__title, .reservations__title, .services__title {
   font-family: Aguafina Script;
   font-size: 3rem;
   font-weight: 500; }
@@ -631,9 +631,8 @@ html, body {
   .specials__outer-container {
     height: 69vh;
     background-image: url("../assets/home/specials-border.png");
-    background-size: 100% 69vh;
-    background-repeat: no-repeat;
-    background-position: center; }
+    background-size: 100% 65vh;
+    background-repeat: no-repeat; }
   .specials__menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -673,26 +672,73 @@ html, body {
       border-color: #ad0600;
       left: 2px; }
   .specials__cutlery {
-    height: 255px;
-    background: url("../assets/home/cutlery.png") center;
-    background-size: contain; }
+    height: 210px;
+    background-image: url("../assets/home/cutlery.png");
+    background-size: contain;
+    background-position-x: 100px;
+    background-repeat: no-repeat; }
 
 /* 4. RESERVATIONS */
 .reservations {
-  background: url(../assets/reso-background.jpg) no-repeat center;
-  /*background-position: center;*/
-  color: #fff; }
+  background: url(../assets/reso-background.jpg) no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 45px 0;
+  text-align: center; }
   .reservations__title, .reservations__copy {
     color: #fff; }
   .reservations__form {
-    color: black;
-    outline: none;
     flex-wrap: wrap;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin: 40px 0; }
   .reservations__field {
-    width: 33%; }
+    color: black;
+    font-style: italic;
+    padding: 10px;
+    outline: none;
+    border: 1px solid transparent;
+    transition: all 0.3s ease; }
+    .reservations__field:focus {
+      outline: none;
+      border: 1px solid #E82923; }
+  .reservations__button {
+    outline: none;
+    background-color: #ff524d;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.1s ease;
+    padding: 5px 50px;
+    width: 22%; }
+    .reservations__button:hover {
+      background-color: #E82923; }
+    .reservations__button:active {
+      background-color: #FF2D26;
+      padding-left: 16px; }
 
 /* 5. SERVICES */
+.services {
+  padding: 45px 0;
+  text-align: center;
+  background-color: #f2f2f2; }
+  .services__copy {
+    width: 50%;
+    margin: 0 auto; }
+  .services__inner-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 15px; }
+  .services__item {
+    background-color: white;
+    height: 130px;
+    margin-top: 100px; }
+    .services__item-icon {
+      position: relative;
+      bottom: 65px; }
+    .services__item-title {
+      position: relative;
+      bottom: 50px; }
+
 .menu-section {
   /*This implements the layout using Flexbox */
   /* GALLERY */
