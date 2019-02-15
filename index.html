@@ -207,15 +207,20 @@
 
 				<!-- RESERVATIONS - Form -->
 				<form class="reservations__form" action="" method="post">
-					<input id="name" class="reservations__field" type="text" placeholder="Name:" required>
-					<input id="email" class="reservations__field" type="email" placeholder="Email:" required>
-					<input id="phone" class="reservations__field" type="tel" placeholder="Phone:" required>
 
-					<input id="time" class="reservations__field" type="text" placeholder="Time:" required>
-					<input id="date" class="reservations__field" type="text" placeholder="Date:" required>
-					<input id="number" class="reservations__field" type="number" placeholder="Number of people:" required>
+					<div class="reservations__form-top">
+						<input id="name" class="reservations__field" type="text" placeholder="Name:" required>
+						<input id="email" class="reservations__field" type="email" placeholder="Email:" required>
+						<input id="phone" class="reservations__field" type="tel" placeholder="Phone:" required>
+					</div>
 
-					<button class="reservations__button" type="submit">book now</button>
+					<div class="reservations__form-bottom">
+						<input id="time" class="reservations__field" type="text" placeholder="Time:" required>
+						<input id="date" class="reservations__field" type="text" placeholder="Date:" required>
+						<input id="number" class="reservations__field" type="number" placeholder="Number of people:" required>
+						<button class="reservations__button" type="submit">book now</button>
+					</div>
+
 				</form>
 			</div>
 		</section>

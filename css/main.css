@@ -358,7 +358,7 @@ th {
   padding: 0; }
 
 /* FLEXBOX */
-.header__outer-container, .footer__top, .footer__social, .hero__subhead-container, .about__outer-container, .reservations__form, .menu-section__menu-list, .menu-section__gallery, .event__post-info, .event__info-element, .event__buttons {
+.header__outer-container, .footer__top, .footer__social, .hero__subhead-container, .about__outer-container, .menu-section__menu-list, .menu-section__gallery, .event__post-info, .event__info-element, .event__buttons {
   display: flex;
   flex-direction: row; }
 
@@ -393,6 +393,7 @@ th {
 
 /* COLORS */
 /* BACKGROUND */
+/* BREAKPOINTS */
 html, body {
   font-family: Source Sans Pro, sans-serif;
   font-size: 14px; }
@@ -430,8 +431,6 @@ html, body {
     justify-content: space-between;
     align-items: center; }
   .header__top {
-    /*@extend %flexbox-row;
-    justify-content: space-between;*/
     align-items: center;
     background-color: black;
     color: #f2f2f2; }
@@ -534,7 +533,7 @@ html, body {
         background-color: #E82923; }
       .footer__newsletter-button:active {
         background-color: #FF2D26;
-        padding-left: 16px; }
+        padding-right: 30px; }
   .footer__hours {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -688,9 +687,20 @@ html, body {
   .reservations__title, .reservations__copy {
     color: #fff; }
   .reservations__form {
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
     margin: 40px 0; }
+    .reservations__form-top {
+      display: grid;
+      grid-template-columns: 33% repeat(2, 1fr);
+      grid-gap: 10px;
+      align-content: center; }
+    .reservations__form-bottom {
+      display: grid;
+      grid-template-columns: 33% auto auto 15%;
+      grid-gap: 10px;
+      align-content: center; }
   .reservations__field {
     color: black;
     font-style: italic;
@@ -708,13 +718,12 @@ html, body {
     color: #fff;
     font-weight: 600;
     transition: all 0.1s ease;
-    padding: 5px 50px;
-    width: 22%; }
+    padding: 5px 40px; }
     .reservations__button:hover {
       background-color: #E82923; }
     .reservations__button:active {
       background-color: #FF2D26;
-      padding-left: 16px; }
+      padding-right: 30px; }
 
 /* 5. SERVICES */
 .services {

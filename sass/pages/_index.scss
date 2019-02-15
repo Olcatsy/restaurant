@@ -205,10 +205,24 @@
   }
 
   &__form {
-    @extend %flexbox-row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
     margin: 40px 0;
+
+    &-top {
+      display: grid;
+      grid-template-columns:  33% repeat(2, 1fr);
+      grid-gap: 10px;
+      align-content: center;
+    }
+
+    &-bottom {
+      display: grid;
+      grid-template-columns: 33% auto auto 15%;
+      grid-gap: 10px;
+      align-content: center;
+    }
   }
 
   &__field {
@@ -229,8 +243,7 @@
   &__button {
     @include button(red-button);
     @extend %capitalize;
-    padding: 5px 50px;
-    width: 22%;
+    padding: 5px 40px;
   }
 }
 
@@ -278,7 +291,6 @@
     &-title {
       position: relative;
       bottom: 50px;
-
       @extend %uppercase;
     }
 
