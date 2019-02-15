@@ -4,29 +4,20 @@
 
   &__outer-container {
     @extend %outer-container;
-
     padding: 60px 0;
-    /*display: grid;
-    grid-template-columns: repeat(3, auto 1fr 3fr);
-    grid-template-rows: repeat(5, 1fr);*/
   }
 
   &__title {
-    @extend %uppercase;
-
+    text-transform: uppercase;
     margin: 15px 0;
   }
 
-  /*This implements the layout using Flexbox */
   &__menu-list {
-    @extend %flexbox-row;
-
-    justify-content: space-between;
+    @include flexbox(row, space-between);
   }
 
   &__copy--big {
-    @extend %capitalize;
-
+    text-transform: capitalize;
     font-size: 1.4em;
     margin-top: 20px;
   }
@@ -40,7 +31,7 @@
 
   /* GALLERY */
   &__gallery {
-    @extend %flexbox-row;
+    @include flexbox(row);
 
     width: 100vw;
     align-items: baseline;

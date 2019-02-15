@@ -1,43 +1,9 @@
-/* FLEXBOX */
-%flexbox-row {
-  display: flex;
-  flex-direction: row
-}
-
-%flexbox-column {
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-
-/* TYPOGRAPHY */
-%capitalize {
-  text-transform: capitalize;
-}
-
-%uppercase {
-  text-transform: uppercase;
-}
-
 %outer-container {
   margin: auto;
   max-width: 1000px;
   /* I left this for mobile version
   padding-left:20px;
   padding-right:20px;*/
-}
-
-
-/* POSITIONING */
-%centered-text {
-  text-align: center;
-}
-
-%centered-flex {
-  justify-content: center;
-  align-items: center;
 }
 
 %underline {

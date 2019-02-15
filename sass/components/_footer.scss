@@ -12,22 +12,21 @@
     color: $light-grey;
   }
 
+
+
   /* TOP */
   &__top {
     background: $dark-background;
     color: white;
-
-
-    @extend %flexbox-row;
-    @extend %centered-flex;
-    @extend %centered-text;
-
-    &-copy {
-      text-align: justify;
-    }
+    @include flexbox(row, center, center);
+    text-align: center;
 
     & * {
       padding: 10px 0;
+    }
+
+    &-copy {
+      text-align: justify;
     }
   }
 
@@ -35,6 +34,7 @@
     padding: 45px 150px;
   }
   /* End of TOP */
+
 
 
   /* MIDDLE */
@@ -53,8 +53,8 @@
   &__column-title {
     grid-area: header;
     margin-bottom: 15px;
-
   }
+
 
   /* MIDDLE - Newsletter */
   &__newsletter {
@@ -63,31 +63,17 @@
     grid-template-areas: "header";
 
     &-field {
-      border: none;
-      padding: 10px;
+      @include form-field($dark-grey, $red);
       width: 80%;
-      border: 1px solid transparent;
-      color: $dark-grey;
-      transition: all 0.3s ease;
-
-      &:focus {
-        outline: none;
-        border: 1px solid $hover-red;
-
-      }
     }
 
     &-button {
+      @include red-button(6px);
       width: 19%;
-      @include button(red-button);
       padding: 11px;
       margin-left: -3px;
-
-
     }
   }
-
-
 
 
   /* MIDDLE - Hours */
@@ -104,6 +90,7 @@
     }
   }
 
+
   /* MIDDLE - Address */
   &__address {
     display: grid;
@@ -115,9 +102,11 @@
   /* End of MIDDLE */
 
 
+
   /* BOTTOM */
   &__bottom {
     background: $dark-background;
+    padding-bottom: 30px;
   }
 
   &__copyright {
@@ -127,25 +116,16 @@
     padding: 20px;
 
     &-link {
-      text-decoration: none;
-      color: $white;
+      @include link($red);
     }
   }
 
   &__social {
     margin: auto;
-
-    @extend %flexbox-row;
-    @extend %centered-flex;
+    @include flexbox(row, center, center);
 
     &-button {
-      width: 50px;
-      height: 50px;
-      background-color: $black;
-      border-radius: 50%;
-      border: none;
-      margin: 5px;
-
+      @include social-button($black);
     }
   }
   /* End of BOTTOM */

@@ -5,9 +5,8 @@
   height: 70vh;
   color: white;
 
-  @extend %flexbox-column;
-  @extend %centered-flex;
-  @extend %centered-text;
+  @include flexbox(column, center, center);
+  text-align: center;
 
   &__outer-container {
     @extend %outer-container;
@@ -32,13 +31,11 @@
 
   /* HERO - Subhead */
   &__subhead-container {
-    @extend %flexbox-row;
-    align-items: center;
-    justify-content: center;
+    @include flexbox(row, center, center);
   }
 
   &__subhead {
-    @extend %uppercase;
+    text-transform: uppercase;
     font-size: 1.2rem;
   }
 
@@ -72,21 +69,18 @@
 
   &__outer-container {
     @extend %outer-container;
-    @extend %flexbox-row;
+    @include flexbox(row);
     padding: 50px;
   }
 
   /* ABOUT - Left */
   &__left {
-    @extend %flexbox-column;
-    @extend %centered-flex;
-    @extend %centered-text;
-
+    @include flexbox(column, center, center);
+    text-align: center;
     margin-right: 20px;
   }
 
   &__underline {
-    @extend %underline;
     margin: 20px auto;
   }
 
@@ -122,7 +116,7 @@
 
   &__title {
     @extend %title;
-    @extend %centered-text;
+    text-align: center;
   }
 
   &__menu {
@@ -143,14 +137,14 @@
     grid-row-gap: 40px;
 
     &-title {
-      @extend %uppercase;
+      text-transform: uppercase;
       grid-area: title;
       justify-self: center;
     }
 
     &-dish {
       margin-right: 35px;
-      @extend %capitalize;
+      text-transform: capitalize;
     }
 
     &-price {
@@ -162,7 +156,7 @@
     display: block;
     margin: auto;
 
-    @include button(black-outline);
+    @include black-outline(8px 40px);
   }
 
   /* SPECIALS - Cutlery background*/
@@ -212,7 +206,7 @@
 
     &-top {
       display: grid;
-      grid-template-columns:  33% repeat(2, 1fr);
+      grid-template-columns: 33% repeat(2, 1fr);
       grid-gap: 10px;
       align-content: center;
     }
@@ -226,23 +220,13 @@
   }
 
   &__field {
-    color: $black;
+    @include form-field($black, $red);
     font-style: italic;
-    padding: 10px;
-
-    outline: none;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-
-    &:focus {
-      outline: none;
-      border: 1px solid $hover-red;
-    }
   }
 
   &__button {
-    @include button(red-button);
-    @extend %capitalize;
+    @include red-button(35px);
+    text-transform: capitalize;
     padding: 5px 40px;
   }
 }
@@ -291,7 +275,7 @@
     &-title {
       position: relative;
       bottom: 50px;
-      @extend %uppercase;
+      text-transform: uppercase;
     }
 
   }

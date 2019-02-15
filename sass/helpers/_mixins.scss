@@ -1,0 +1,31 @@
+@mixin flexbox($flex-direction, $justify: initial, $align: initial) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin link($hover-color) {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:active {
+    color: darken($hover-color, 10%);
+  }
+}
+
+@mixin form-field($font-color, $focus-color) {
+  color: $font-color;
+  padding: 10px;
+  outline: none;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border: 1px solid $focus-color;
+  }
+}

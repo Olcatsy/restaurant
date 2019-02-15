@@ -5,14 +5,11 @@
 
   &__outer-container {
     @extend %outer-container;
-    @extend %flexbox-row;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox(row, space-between, center);
   }
 
   /* HEADER - Top */
   &__top {
-    align-items: center;
     background-color: $black;
     color: $light-grey;
     }
@@ -29,19 +26,37 @@
     padding: 0 6px;
   }
 
-  &__contact-button {
-    background-color: transparent;
-    outline: none;
-    border: none;
-    min-width: 50px;
-    min-height: 50px;
+  &__search {
+    display: inline-block;
+
+    &-button {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      min-width: 50px;
+      min-height: 50px;
+    }
+
+    &-field {
+      color: $white;
+      background-color: lighten($dark-grey, 10%);
+      border: none;
+      outline: none;
+      border-radius: 7px;
+      width: 0;
+      transition: width 1s ease;
+    }
+
+    &:focus-within {
+      .header__search-field {
+        width: 150px;
+        padding: 5px;
+      }
+    }
   }
 
   /* HEADER - Bottom */
   &__bottom {
-    /*@extend %flexbox-row;
-    justify-content: space-between;*/
-    align-items: center;
     background-color: $black-transparent;
     color: $white;
     padding: 15px 0;
@@ -56,19 +71,9 @@
   }
 
   &__nav-link {
-    @extend %uppercase;
-    color: $white;
-    text-decoration: none; /*remove this when using normalize.scss*/
+    @include link($red);
+    text-transform: uppercase;
     padding: 0 15px;
-
-    /* turn into mixin for link hovers*/
-    &:hover {
-      color: $red;
-    }
-
-    &:active {
-      color: $dark-red;
-    }
   }
 
 

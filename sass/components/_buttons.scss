@@ -1,49 +1,68 @@
-@mixin button($button-type) {
-  @if $button-type == black-outline {
-    outline: none;
-    background-color: transparent;
-    border: 3px solid black;
+@mixin black-outline($padding) {
+  outline: none;
+  background-color: transparent;
+  border: 3px solid $black;
 
-    color: black;
-    font-weight: 700;
-    @extend %uppercase;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
 
-    padding: 8px 40px;
-    position: relative;
-    transition: all 0.3s ease;
+  padding: $padding;
+  position: relative;
+  transition: all 0.3s ease;
 
     &:hover {
-      color: $hover-red;
-      border-color: $hover-red;
+      color: darken($red, 8%);
+      border-color: darken($red, 8%);
     }
 
     &:active {
-      color: $dark-red;
-      border-color: $dark-red;
+      color: darken($red, 20%);
+      border-color: darken($red, 20%);
       left: 2px;
     }
-  }
+}
 
-  @else if $button-type == red-button {
-    outline: none;
-    background-color: $red;
-    border: none;
 
-    color: $white;
-    font-weight: 600;
+@mixin red-button($padding-right) {
+  outline: none;
+  background-color: $red;
+  border: none;
+  transition: all 0.1s ease;
 
-    transition: all 0.1s ease;
+  color: $white;
+  font-weight: 600;
 
     &:hover {
-      background-color: $hover-red;
+      background-color: darken($red, 8%);
     }
 
     &:active {
-      background-color: $active-red;
-      padding-right: 30px;
+      /*make padding a parameter in the mixin*/
+      background-color: darken($red, 20%);
+      padding-right: $padding-right;
+    }
+}
+
+
+@mixin social-button($background) {
+  width: 50px;
+  height: 50px;
+  background-color: $background;
+  border-radius: 50%;
+  border: none;
+  margin: 0 15px;
+  outline: none;
+
+    &:hover {
+      background-color: lighten($background, 5%);
+      width: 55px;
+      height: 55px;
     }
 
-  }
-
-
+    &:active {
+      background-color: lighten($background, 10%);
+      width: 55px;
+      height: 55px;
+    }
 }

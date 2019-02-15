@@ -20,6 +20,7 @@
     margin-bottom: 20px;
     font-size: 1.8rem;
     font-weight: 600;
+    text-transform: capitalize;
   }
 
   &__post-info {
@@ -28,9 +29,8 @@
   }
 
   &__post-info, &__info-element {
-    @extend %flexbox-row;
-    justify-content: center;
-    align-items: end;
+    @include flexbox(row, center, end);
+
   }
 
   &__info-element {
@@ -54,15 +54,11 @@
   /* End of Main post */
 
   &__buttons {
-    @extend %flexbox-row;
-    justify-content: space-between;
+    @include flexbox(row, space-between);
     margin-top: 20px;
   }
 
   &__button {
-    @include button(black-outline);
+    @include black-outline(8px 40px);
   }
-
-
-
 }

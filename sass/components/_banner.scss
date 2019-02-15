@@ -2,10 +2,8 @@
   background: $dark-background fixed center;
   color: $white;
   height: 40vh;
-
-  @extend %flexbox-column;
-  @extend %centered-text;
-
+  text-align: center;
+  @include flexbox(row);
 
   &__outer-container {
     @extend %outer-container;
@@ -25,18 +23,8 @@
   }
 
   &__link {
-    color: $white;
+    @include link($red);
     margin-left: 10px;
     margin-right: 10px;
-
-    /* turn into mixin for link hovers*/
-    &:hover {
-      color: $red;
-    }
-
-    &:active {
-      color: $dark-red;
-    }
   }
-
 }

@@ -357,22 +357,6 @@ td,
 th {
   padding: 0; }
 
-/* FLEXBOX */
-.header__outer-container, .footer__top, .footer__social, .hero__subhead-container, .about__outer-container, .menu-section__menu-list, .menu-section__gallery, .event__post-info, .event__info-element, .event__buttons {
-  display: flex;
-  flex-direction: row; }
-
-.banner, .hero, .about__left {
-  display: flex;
-  flex-direction: column; }
-
-/* TYPOGRAPHY */
-.specials__course-dish, .reservations__button, .menu-section__copy--big {
-  text-transform: capitalize; }
-
-.header__nav-link, .hero__subhead, .specials__course-title, .specials__button, .services__item-title, .menu-section__title, .event__button {
-  text-transform: uppercase; }
-
 .banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
   margin: auto;
   max-width: 1000px;
@@ -380,18 +364,11 @@ th {
   padding-left:20px;
   padding-right:20px;*/ }
 
-/* POSITIONING */
-.banner, .footer__top, .hero, .about__left, .specials__title {
-  text-align: center; }
-
-.footer__top, .footer__social, .hero, .about__left {
-  justify-content: center;
-  align-items: center; }
-
-.banner__underline, .about__underline, .reservations__underline, .services__underline, .event__underline {
+.banner__underline, .reservations__underline, .services__underline, .event__underline {
   margin: 0 auto 15px auto; }
 
 /* COLORS */
+/*can't change background opacity*/
 /* BACKGROUND */
 /* BREAKPOINTS */
 html, body {
@@ -406,20 +383,25 @@ html, body {
 .banner {
   background: url(../assets/reso-background.jpg) fixed center;
   color: #fff;
-  height: 40vh; }
+  height: 40vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: initial;
+  align-items: initial; }
   .banner__outer-container {
     margin-bottom: 40px; }
   .banner__links {
     display: block; }
   .banner__link {
-    color: #fff;
+    color: white;
+    text-decoration: none;
     margin-left: 10px;
-    margin-right: 10px;
-    /* turn into mixin for link hovers*/ }
+    margin-right: 10px; }
     .banner__link:hover {
       color: #ff524d; }
     .banner__link:active {
-      color: #ad0600; }
+      color: #ff201a; }
 
 .header {
   width: 100%;
@@ -428,10 +410,11 @@ html, body {
   /* HEADER - Top */
   /* HEADER - Bottom */ }
   .header__outer-container {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center; }
   .header__top {
-    align-items: center;
     background-color: black;
     color: #f2f2f2; }
   .header__contact-item {
@@ -442,16 +425,26 @@ html, body {
     position: relative;
     bottom: -1px;
     padding: 0 6px; }
-  .header__contact-button {
-    background-color: transparent;
-    outline: none;
-    border: none;
-    min-width: 50px;
-    min-height: 50px; }
+  .header__search {
+    display: inline-block; }
+    .header__search-button {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      min-width: 50px;
+      min-height: 50px; }
+    .header__search-field {
+      color: #fff;
+      background-color: #343434;
+      border: none;
+      outline: none;
+      border-radius: 7px;
+      width: 0;
+      transition: width 1s ease; }
+    .header__search:focus-within .header__search-field {
+      width: 150px;
+      padding: 5px; }
   .header__bottom {
-    /*@extend %flexbox-row;
-    justify-content: space-between;*/
-    align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     padding: 15px 0; }
@@ -460,15 +453,14 @@ html, body {
   .header__nav-item {
     display: inline-block; }
   .header__nav-link {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    /*remove this when using normalize.scss*/
-    padding: 0 15px;
-    /* turn into mixin for link hovers*/ }
+    text-transform: uppercase;
+    padding: 0 15px; }
     .header__nav-link:hover {
       color: #ff524d; }
     .header__nav-link:active {
-      color: #ad0600; }
+      color: #ff201a; }
 
 .footer {
   width: 100%;
@@ -487,11 +479,16 @@ html, body {
     color: #f2f2f2; }
   .footer__top {
     background: url(../assets/reso-background.jpg);
-    color: white; }
-    .footer__top-copy {
-      text-align: justify; }
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
     .footer__top * {
       padding: 10px 0; }
+    .footer__top-copy {
+      text-align: justify; }
   .footer__top .footer__outer-container {
     padding: 45px 150px; }
   .footer__middle {
@@ -510,30 +507,30 @@ html, body {
     grid-template-rows: 25% repeat(2, 1fr);
     grid-template-areas: "header"; }
     .footer__newsletter-field {
-      border: none;
-      padding: 10px;
-      width: 80%;
-      border: 1px solid transparent;
       color: #1a1a1a;
-      transition: all 0.3s ease; }
+      padding: 10px;
+      outline: none;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      width: 80%; }
       .footer__newsletter-field:focus {
-        outline: none;
-        border: 1px solid #E82923; }
+        border: 1px solid #ff524d; }
     .footer__newsletter-button {
-      width: 19%;
       outline: none;
       background-color: #ff524d;
       border: none;
+      transition: all 0.1s ease;
       color: #fff;
       font-weight: 600;
-      transition: all 0.1s ease;
+      width: 19%;
       padding: 11px;
       margin-left: -3px; }
       .footer__newsletter-button:hover {
-        background-color: #E82923; }
+        background-color: #ff2a24; }
       .footer__newsletter-button:active {
-        background-color: #FF2D26;
-        padding-right: 30px; }
+        /*make padding a parameter in the mixin*/
+        background-color: #e60600;
+        padding-right: 6px; }
   .footer__hours {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -550,24 +547,42 @@ html, body {
     grid-template-areas: "header header";
     column-gap: 10px; }
   .footer__bottom {
-    background: url(../assets/reso-background.jpg); }
+    background: url(../assets/reso-background.jpg);
+    padding-bottom: 30px; }
   .footer__copyright {
     color: #f2f2f2;
     text-align: center;
     font-size: 12px;
     padding: 20px; }
     .footer__copyright-link {
-      text-decoration: none;
-      color: #fff; }
+      color: white;
+      text-decoration: none; }
+      .footer__copyright-link:hover {
+        color: #ff524d; }
+      .footer__copyright-link:active {
+        color: #ff201a; }
   .footer__social {
-    margin: auto; }
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
     .footer__social-button {
       width: 50px;
       height: 50px;
       background-color: black;
       border-radius: 50%;
       border: none;
-      margin: 5px; }
+      margin: 0 15px;
+      outline: none; }
+      .footer__social-button:hover {
+        background-color: #0d0d0d;
+        width: 55px;
+        height: 55px; }
+      .footer__social-button:active {
+        background-color: #1a1a1a;
+        width: 55px;
+        height: 55px; }
 
 /* 1. HERO */
 .hero {
@@ -575,6 +590,11 @@ html, body {
   background-size: cover;
   height: 70vh;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   /* HERO - Date */
   /* HERO - Headline */
   /* HERO - Subhead */
@@ -589,9 +609,12 @@ html, body {
     font-size: 5rem;
     font-weight: 500; }
   .hero__subhead-container {
-    align-items: center;
-    justify-content: center; }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
   .hero__subhead {
+    text-transform: uppercase;
     font-size: 1.2rem; }
   .hero__subhead-item {
     margin: 0 10px; }
@@ -612,8 +635,17 @@ html, body {
   /* ABOUT - Left */
   /* ABOUT - Right */ }
   .about__outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: initial;
+    align-items: initial;
     padding: 50px; }
   .about__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-right: 20px; }
   .about__underline {
     margin: 20px auto; }
@@ -632,6 +664,8 @@ html, body {
     background-image: url("../assets/home/specials-border.png");
     background-size: 100% 65vh;
     background-repeat: no-repeat; }
+  .specials__title {
+    text-align: center; }
   .specials__menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -646,10 +680,12 @@ html, body {
     grid-template-areas: "title title";
     grid-row-gap: 40px; }
     .specials__course-title {
+      text-transform: uppercase;
       grid-area: title;
       justify-self: center; }
     .specials__course-dish {
-      margin-right: 35px; }
+      margin-right: 35px;
+      text-transform: capitalize; }
     .specials__course-price {
       font-style: italic; }
   .specials__button {
@@ -660,15 +696,16 @@ html, body {
     border: 3px solid black;
     color: black;
     font-weight: 700;
+    text-transform: uppercase;
     padding: 8px 40px;
     position: relative;
     transition: all 0.3s ease; }
     .specials__button:hover {
-      color: #E82923;
-      border-color: #E82923; }
+      color: #ff2a24;
+      border-color: #ff2a24; }
     .specials__button:active {
-      color: #ad0600;
-      border-color: #ad0600;
+      color: #e60600;
+      border-color: #e60600;
       left: 2px; }
   .specials__cutlery {
     height: 210px;
@@ -703,27 +740,28 @@ html, body {
       align-content: center; }
   .reservations__field {
     color: black;
-    font-style: italic;
     padding: 10px;
     outline: none;
     border: 1px solid transparent;
-    transition: all 0.3s ease; }
+    transition: all 0.3s ease;
+    font-style: italic; }
     .reservations__field:focus {
-      outline: none;
-      border: 1px solid #E82923; }
+      border: 1px solid #ff524d; }
   .reservations__button {
     outline: none;
     background-color: #ff524d;
     border: none;
+    transition: all 0.1s ease;
     color: #fff;
     font-weight: 600;
-    transition: all 0.1s ease;
+    text-transform: capitalize;
     padding: 5px 40px; }
     .reservations__button:hover {
-      background-color: #E82923; }
+      background-color: #ff2a24; }
     .reservations__button:active {
-      background-color: #FF2D26;
-      padding-right: 30px; }
+      /*make padding a parameter in the mixin*/
+      background-color: #e60600;
+      padding-right: 35px; }
 
 /* 5. SERVICES */
 .services {
@@ -746,28 +784,34 @@ html, body {
       bottom: 65px; }
     .services__item-title {
       position: relative;
-      bottom: 50px; }
+      bottom: 50px;
+      text-transform: uppercase; }
 
 .menu-section {
-  /*This implements the layout using Flexbox */
   /* GALLERY */
   /* End of GALLERY */ }
   .menu-section__outer-container {
-    padding: 60px 0;
-    /*display: grid;
-    grid-template-columns: repeat(3, auto 1fr 3fr);
-    grid-template-rows: repeat(5, 1fr);*/ }
+    padding: 60px 0; }
   .menu-section__title {
+    text-transform: uppercase;
     margin: 15px 0; }
   .menu-section__menu-list {
-    justify-content: space-between; }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: initial; }
   .menu-section__copy--big {
+    text-transform: capitalize;
     font-size: 1.4em;
     margin-top: 20px; }
   .menu-section__copy {
     padding-left: 5px;
     font-style: italic; }
   .menu-section__gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: initial;
+    align-items: initial;
     width: 100vw;
     align-items: baseline; }
   .menu-section__img {
@@ -788,11 +832,14 @@ html, body {
   .event__post-title {
     margin-bottom: 20px;
     font-size: 1.8rem;
-    font-weight: 600; }
+    font-weight: 600;
+    text-transform: capitalize; }
   .event__post-info {
     margin: 20px auto;
     letter-spacing: 1px; }
   .event__post-info, .event__info-element {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: end; }
   .event__info-element {
@@ -803,7 +850,10 @@ html, body {
     margin: 30px 0;
     line-height: 1.5em; }
   .event__buttons {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: initial;
     margin-top: 20px; }
   .event__button {
     outline: none;
@@ -811,13 +861,14 @@ html, body {
     border: 3px solid black;
     color: black;
     font-weight: 700;
+    text-transform: uppercase;
     padding: 8px 40px;
     position: relative;
     transition: all 0.3s ease; }
     .event__button:hover {
-      color: #E82923;
-      border-color: #E82923; }
+      color: #ff2a24;
+      border-color: #ff2a24; }
     .event__button:active {
-      color: #ad0600;
-      border-color: #ad0600;
+      color: #e60600;
+      border-color: #e60600;
       left: 2px; }
