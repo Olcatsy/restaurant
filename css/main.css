@@ -405,12 +405,16 @@ html, body {
   .banner__link {
     color: white;
     text-decoration: none;
-    margin-left: 10px;
-    margin-right: 10px; }
+    padding: 15px;
+    font-size: 1.3rem; }
     .banner__link:hover {
       color: #ff524d; }
     .banner__link:active {
       color: #ff201a; }
+    @media screen and (min-width: 768px) {
+      .banner__link {
+        padding: 0 10px;
+        font-size: 1rem; } }
 
 .header {
   width: 100%;
@@ -474,11 +478,16 @@ html, body {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0 15px; }
+    /* I shoud make a hamburger menu for phones below 480px
+    Otherwise the links overlap*/
+    padding: 15px; }
     .header__nav-link:hover {
       color: #ff524d; }
     .header__nav-link:active {
       color: #ff201a; }
+    @media screen and (min-width: 768px) {
+      .header__nav-link {
+        padding: 0 15px; } }
 
 .footer {
   width: 100%;

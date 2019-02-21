@@ -102,9 +102,13 @@
   &__nav-link {
     @include link($red);
     text-transform: uppercase;
-    padding: 0 15px;
+    /* I shoud make a hamburger menu for phones below 480px
+    Otherwise the links overlap*/
+    padding: 15px;
 
-    @include min-width($tablet) {}
+    @include min-width($tablet) {
+      padding: 0 15px;
+    }
   }
 
 }
