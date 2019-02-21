@@ -357,20 +357,29 @@ td,
 th {
   padding: 0; }
 
-.banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
-  margin: auto;
-  max-width: 1000px;
-  /* I left this for mobile version
-  padding-left:20px;
-  padding-right:20px;*/ }
-
-.banner__underline, .reservations__underline, .services__underline, .event__underline {
-  margin: 0 auto 15px auto; }
-
 /* COLORS */
 /*can't change background opacity*/
 /* BACKGROUND */
 /* BREAKPOINTS */
+/* Since I'm doing mobile first,
+these breakpoints are used with min-width*/
+/* FLEXBOX */
+/* FORM FIELD */
+/* MEDIA QUERIES */
+.banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
+  padding: 0 20px; }
+  @media screen and (min-width: 768px) {
+    .banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
+      margin: auto;
+      max-width: 1000px; } }
+  @media screen and (min-width: 1600px) {
+    .banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
+      margin: auto;
+      max-width: 1200px; } }
+
+.banner__underline, .reservations__underline, .services__underline, .event__underline {
+  margin: 0 auto 15px auto; }
+
 html, body {
   font-family: Source Sans Pro, sans-serif;
   font-size: 14px; }
@@ -387,8 +396,8 @@ html, body {
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: initial;
-  align-items: initial; }
+  justify-content: center;
+  align-items: flex-end; }
   .banner__outer-container {
     margin-bottom: 40px; }
   .banner__links {
@@ -417,11 +426,20 @@ html, body {
   .header__top {
     background-color: black;
     color: #f2f2f2; }
+  .header__welcome {
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .header__welcome {
+        display: inline-block; } }
   .header__contact-item {
-    padding: 0 20px; }
+    padding: 0 20px;
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .header__contact-item {
+        display: inline-block; } }
   .header__icon {
     /*change this to match font size*/
-    height: 13px;
+    height: 15px;
     position: relative;
     bottom: -1px;
     padding: 0 6px; }

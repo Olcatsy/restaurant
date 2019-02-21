@@ -1,10 +1,18 @@
 %outer-container {
-  margin: auto;
-  max-width: 1000px;
-  /* I left this for mobile version
-  padding-left:20px;
-  padding-right:20px;*/
+  padding: 0 20px;
+
+  @include min-width($tablet) {
+    margin: auto;
+    max-width: 1000px;
+  }
+
+  @include min-width($desktop) {
+    margin: auto;
+    max-width: 1200px;
+  }
 }
+
+
 
 %underline {
   margin: 0 auto 15px auto;

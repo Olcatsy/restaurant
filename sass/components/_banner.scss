@@ -3,7 +3,7 @@
   color: $white;
   height: 40vh;
   text-align: center;
-  @include flexbox(row);
+  @include flexbox(row, center, flex-end);
 
   &__outer-container {
     @extend %outer-container;

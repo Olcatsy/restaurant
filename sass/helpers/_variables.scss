@@ -14,3 +14,9 @@ $dark-background: url(../assets/reso-background.jpg);
 
 
 /* BREAKPOINTS */
+/* Since I'm doing mobile first,
+these breakpoints are used with min-width*/
+$phone-lnd: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1600px;
