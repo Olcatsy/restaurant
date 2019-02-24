@@ -818,31 +818,50 @@ html, body {
   /* GALLERY */
   /* End of GALLERY */ }
   .menu-section__outer-container {
-    padding: 60px 0; }
+    padding: 50px; }
+    @media screen and (min-width: 768px) {
+      .menu-section__outer-container {
+        padding: 60px 20px; } }
   .menu-section__title {
     text-transform: uppercase;
     margin: 15px 0; }
   .menu-section__menu-list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: initial; }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (min-width: 768px) {
+      .menu-section__menu-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: initial; } }
   .menu-section__copy--big {
     text-transform: capitalize;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     margin-top: 20px; }
   .menu-section__copy {
     padding-left: 5px;
-    font-style: italic; }
+    font-style: italic;
+    font-size: 1.1rem; }
   .menu-section__gallery {
     display: flex;
     flex-direction: row;
     justify-content: initial;
     align-items: initial;
-    width: 100vw;
+    /*width: 100vw;*/
     align-items: baseline; }
   .menu-section__img {
-    width: 25%; }
+    /*Try to add a third photo for phone-lnd layout*/
+    width: 50%; }
+    .menu-section__img:nth-child(n+3):nth-child(-n+4) {
+      display: none; }
+      @media screen and (min-width: 768px) {
+        .menu-section__img:nth-child(n+3):nth-child(-n+4) {
+          display: inline-block; } }
+    @media screen and (min-width: 768px) {
+      .menu-section__img {
+        width: 25%; } }
 
 .event {
   /* Main post */

@@ -4,28 +4,42 @@
 
   &__outer-container {
     @extend %outer-container;
-    padding: 60px 0;
+    padding: 50px;
+
+    @include min-width($tablet) {
+      padding: 60px 20px;
+    }
   }
 
   &__title {
     text-transform: uppercase;
     margin: 15px 0;
+
+    @include min-width($tablet) {}
   }
 
   &__menu-list {
-    @include flexbox(row, space-between);
+    @include flexbox(column, center, center);
+
+    @include min-width($tablet) {
+      @include flexbox(row, space-between);
+    }
   }
 
   &__copy--big {
     text-transform: capitalize;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     margin-top: 20px;
+
+    @include min-width($tablet) {}
   }
 
   &__copy {
     padding-left: 5px;
     font-style: italic;
+    font-size: 1.1rem;
 
+    @include min-width($tablet) {}
   }
 
 
@@ -33,12 +47,29 @@
   &__gallery {
     @include flexbox(row);
 
-    width: 100vw;
+    /*width: 100vw;*/
     align-items: baseline;
+
+
+    @include min-width($tablet) {}
   }
 
   &__img {
-    width: 25%;
+    /*Try to add a third photo for phone-lnd layout*/
+    width: 50%;
+
+    &:nth-child(n+3):nth-child(-n+4) {
+      display: none;
+
+      @include min-width($tablet) {
+        display: inline-block;
+      }
+    }
+
+    @include min-width($tablet) {
+      width: 25%;
+    }
+
   }
   /* End of GALLERY */
 }
