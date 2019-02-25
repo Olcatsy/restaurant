@@ -21,9 +21,9 @@
 
 
 /* FORM FIELD */
-@mixin form-field($font-color, $focus-color) {
+@mixin form-field($font-color, $padding, $focus-color) {
   color: $font-color;
-  padding: 10px;
+  padding: $padding;
   outline: none;
   border: 1px solid transparent;
   transition: all 0.3s ease;

@@ -491,8 +491,6 @@ html, body {
 
 .footer {
   width: 100%;
-  /*position: absolute;
-  bottom: 0;*/
   /* TOP */
   /* End of TOP */
   /* MIDDLE */
@@ -514,18 +512,29 @@ html, body {
     text-align: center; }
     .footer__top * {
       padding: 10px 0; }
+    .footer__top-logo {
+      width: 25%; }
     .footer__top-copy {
       text-align: justify; }
   .footer__top .footer__outer-container {
-    padding: 45px 150px; }
+    padding: 20px; }
+    @media screen and (min-width: 480px) {
+      .footer__top .footer__outer-container {
+        padding: 45px 150px; } }
   .footer__middle {
     background-color: #1a1a1a;
     color: #f2f2f2; }
   .footer__middle .footer__outer-container {
-    padding: 20px 0;
+    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px; }
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    justify-content: center; }
+    @media screen and (min-width: 768px) {
+      .footer__middle .footer__outer-container {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px; } }
   .footer__column-title {
     grid-area: header;
     margin-bottom: 15px; }
@@ -535,13 +544,16 @@ html, body {
     grid-template-areas: "header"; }
     .footer__newsletter-field {
       color: #1a1a1a;
-      padding: 10px;
+      padding: 16px;
       outline: none;
       border: 1px solid transparent;
       transition: all 0.3s ease;
       width: 80%; }
       .footer__newsletter-field:focus {
         border: 1px solid #ff524d; }
+      @media screen and (min-width: 768px) {
+        .footer__newsletter-field {
+          padding: 10px; } }
     .footer__newsletter-button {
       outline: none;
       background-color: #ff524d;
@@ -550,7 +562,7 @@ html, body {
       color: #fff;
       font-weight: 600;
       width: 19%;
-      padding: 11px;
+      padding: 17px;
       margin-left: -3px; }
       .footer__newsletter-button:hover {
         background-color: #ff2a24; }
@@ -558,6 +570,9 @@ html, body {
         /*make padding a parameter in the mixin*/
         background-color: #e60600;
         padding-right: 6px; }
+      @media screen and (min-width: 768px) {
+        .footer__newsletter-button {
+          padding: 11px; } }
   .footer__hours {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -572,15 +587,17 @@ html, body {
     grid-template-columns: 15px auto;
     grid-template-rows: 25% auto;
     grid-template-areas: "header header";
-    column-gap: 10px; }
+    grid-column-gap: 20px; }
   .footer__bottom {
     background: url(../assets/reso-background.jpg);
     padding-bottom: 30px; }
   .footer__copyright {
     color: #f2f2f2;
     text-align: center;
-    font-size: 12px;
     padding: 20px; }
+    @media screen and (min-width: 768px) {
+      .footer__copyright {
+        font-size: 12px; } }
     .footer__copyright-link {
       color: white;
       text-decoration: none; }
@@ -590,10 +607,11 @@ html, body {
         color: #ff201a; }
   .footer__social {
     margin: auto;
-    display: flex;
-    flex-direction: row;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    align-items: center; }
+    justify-items: center; }
     .footer__social-button {
       width: 50px;
       height: 50px;
@@ -854,12 +872,20 @@ html, body {
   .menu-section__img {
     /*Try to add a third photo for phone-lnd layout*/
     width: 50%; }
-    .menu-section__img:nth-child(n+3):nth-child(-n+4) {
+    .menu-section__img:nth-child(n+3) {
       display: none; }
       @media screen and (min-width: 768px) {
-        .menu-section__img:nth-child(n+3):nth-child(-n+4) {
+        .menu-section__img:nth-child(n+3) {
+          display: inline-block; } }
+    .menu-section__img:nth-child(n+4) {
+      display: none; }
+      @media screen and (min-width: 1024px) {
+        .menu-section__img:nth-child(n+4) {
           display: inline-block; } }
     @media screen and (min-width: 768px) {
+      .menu-section__img {
+        width: 33.3%; } }
+    @media screen and (min-width: 1024px) {
       .menu-section__img {
         width: 25%; } }
 

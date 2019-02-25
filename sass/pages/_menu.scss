@@ -58,7 +58,7 @@
     /*Try to add a third photo for phone-lnd layout*/
     width: 50%;
 
-    &:nth-child(n+3):nth-child(-n+4) {
+    &:nth-child(n+3) {
       display: none;
 
       @include min-width($tablet) {
@@ -66,7 +66,19 @@
       }
     }
 
+    &:nth-child(n+4) {
+      display: none;
+
+      @include min-width($laptop) {
+        display: inline-block;
+      }
+    }
+
     @include min-width($tablet) {
+      width: 33.3%;
+    }
+
+    @include min-width($laptop) {
       width: 25%;
     }
 

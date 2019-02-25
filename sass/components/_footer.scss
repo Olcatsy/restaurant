@@ -1,8 +1,6 @@
 
 .footer {
   width: 100%;
-  /*position: absolute;
-  bottom: 0;*/
 
   &__outer-container {
     @extend %outer-container;
@@ -25,13 +23,21 @@
       padding: 10px 0;
     }
 
+    &-logo {
+      width: 25%;
+    }
+
     &-copy {
       text-align: justify;
     }
   }
 
   &__top &__outer-container {
-    padding: 45px 150px;
+    padding: 20px;
+
+    @include min-width($phone-lnd) {
+      padding: 45px 150px;
+    }
   }
   /* End of TOP */
 
@@ -44,11 +50,21 @@
   }
 
   &__middle &__outer-container {
-    padding: 20px 0;
+    padding: 20px;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    justify-content: center;
+
+
+    @include min-width($tablet) {
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
+    }
   }
+
 
   &__column-title {
     grid-area: header;
@@ -63,15 +79,23 @@
     grid-template-areas: "header";
 
     &-field {
-      @include form-field($dark-grey, $red);
+      @include form-field($dark-grey, 16px, $red);
       width: 80%;
+
+      @include min-width($tablet) {
+        padding: 10px;
+      }
     }
 
     &-button {
       @include red-button(6px);
       width: 19%;
-      padding: 11px;
+      padding: 17px;
       margin-left: -3px;
+
+      @include min-width($tablet) {
+        padding: 11px;
+      }
     }
   }
 
@@ -97,7 +121,7 @@
     grid-template-columns: 15px auto;
     grid-template-rows: 25% auto;
     grid-template-areas: "header header";
-    column-gap: 10px;
+    grid-column-gap: 20px;
   }
   /* End of MIDDLE */
 
@@ -112,8 +136,11 @@
   &__copyright {
     color: $light-grey;
     text-align: center;
-    font-size: 12px;
     padding: 20px;
+
+    @include min-width($tablet) {
+      font-size: 12px;
+    }
 
     &-link {
       @include link($red);
@@ -122,7 +149,12 @@
 
   &__social {
     margin: auto;
-    @include flexbox(row, center, center);
+    width: 60%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    justify-items: center;
 
     &-button {
       @include social-button($black);

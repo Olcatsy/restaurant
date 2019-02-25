@@ -220,7 +220,7 @@
   }
 
   &__field {
-    @include form-field($black, $red);
+    @include form-field($black, 10px, $red);
     font-style: italic;
   }
 

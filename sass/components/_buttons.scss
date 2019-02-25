@@ -24,7 +24,7 @@
 }
 
 
-@mixin red-button($padding-right) {
+@mixin red-button($padding-active) {
   outline: none;
   background-color: $red;
   border: none;
@@ -40,7 +40,7 @@
     &:active {
       /*make padding a parameter in the mixin*/
       background-color: darken($red, 20%);
-      padding-right: $padding-right;
+      padding-right: $padding-active;
     }
 }
 
