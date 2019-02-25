@@ -33,9 +33,13 @@
   }
 
   &__top &__outer-container {
-    padding: 20px;
+    padding: 45px 20px;
 
     @include min-width($phone-lnd) {
+      padding: 45px
+    }
+
+    @include min-width($tablet) {
       padding: 45px 150px;
     }
   }
@@ -50,7 +54,7 @@
   }
 
   &__middle &__outer-container {
-    padding: 20px;
+    padding: 45px 20px;
 
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -130,7 +134,6 @@
   /* BOTTOM */
   &__bottom {
     background: $dark-background;
-    padding-bottom: 30px;
   }
 
   &__copyright {
@@ -149,7 +152,8 @@
 
   &__social {
     margin: auto;
-    width: 60%;
+    width: 50%;
+    padding: 15px 0 30px ;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);

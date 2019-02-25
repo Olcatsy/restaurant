@@ -15,5 +15,10 @@
 
 
 %underline {
+  width: 100%;
   margin: 0 auto 15px auto;
+
+  @include min-width($phone-lnd) {
+    width: initial;
+  }
 }

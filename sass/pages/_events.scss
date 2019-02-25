@@ -2,7 +2,15 @@
 
   &__outer-container {
     @extend %outer-container;
-    padding: 60px 80px;
+    padding: 60px 0;
+
+    @include min-width($phone-lnd) {
+      padding: 60px 20px;
+    }
+
+    @include min-width($tablet) {
+      padding: 60px 80px;
+    }
   }
 
   &__img {
@@ -12,8 +20,12 @@
 
   /* Main post */
   &__post {
-    margin: 50px 0;
+    padding: 40px 20px;
     text-align: center;
+
+    @include min-width($phone-lnd) {
+      padding: 50px 0;
+    }
   }
 
   &__post-title {
@@ -28,13 +40,19 @@
     letter-spacing: 1px;
   }
 
-  &__post-info, &__info-element {
-    @include flexbox(row, center, end);
+  &__post-info {
+    @include flexbox(column, center, center);
+
+    @include min-width($phone-lnd) {
+      @include flexbox(row, center, end);
+    }
 
   }
 
   &__info-element {
-    margin: 0 10px;
+    margin: 5px 10px;
+
+    @include flexbox(row, center, end);
   }
 
   &__icon {
@@ -54,11 +72,20 @@
   /* End of Main post */
 
   &__buttons {
-    @include flexbox(row, space-between);
+    @include flexbox(row, space-around);
     margin-top: 20px;
+
+    @include min-width($phone-lnd) {
+      @include flexbox(row, space-between);
+    }
+
   }
 
   &__button {
-    @include black-outline(8px 40px);
+    @include black-outline(10px);
+
+    @include min-width($phone-lnd) {
+      padding: 8px 40px;
+    }
   }
 }

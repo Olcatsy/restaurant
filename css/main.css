@@ -378,7 +378,11 @@ these breakpoints are used with min-width*/
       max-width: 1200px; } }
 
 .banner__underline, .reservations__underline, .services__underline, .event__underline {
+  width: 100%;
   margin: 0 auto 15px auto; }
+  @media screen and (min-width: 480px) {
+    .banner__underline, .reservations__underline, .services__underline, .event__underline {
+      width: initial; } }
 
 html, body {
   font-family: Source Sans Pro, sans-serif;
@@ -517,15 +521,18 @@ html, body {
     .footer__top-copy {
       text-align: justify; }
   .footer__top .footer__outer-container {
-    padding: 20px; }
+    padding: 45px 20px; }
     @media screen and (min-width: 480px) {
+      .footer__top .footer__outer-container {
+        padding: 45px; } }
+    @media screen and (min-width: 768px) {
       .footer__top .footer__outer-container {
         padding: 45px 150px; } }
   .footer__middle {
     background-color: #1a1a1a;
     color: #f2f2f2; }
   .footer__middle .footer__outer-container {
-    padding: 20px;
+    padding: 45px 20px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 30px;
@@ -589,8 +596,7 @@ html, body {
     grid-template-areas: "header header";
     grid-column-gap: 20px; }
   .footer__bottom {
-    background: url(../assets/reso-background.jpg);
-    padding-bottom: 30px; }
+    background: url(../assets/reso-background.jpg); }
   .footer__copyright {
     color: #f2f2f2;
     text-align: center;
@@ -607,7 +613,8 @@ html, body {
         color: #ff201a; }
   .footer__social {
     margin: auto;
-    width: 60%;
+    width: 50%;
+    padding: 15px 0 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
@@ -894,13 +901,22 @@ html, body {
   /* Line height should be a Typography mixin */
   /* End of Main post */ }
   .event__outer-container {
-    padding: 60px 80px; }
+    padding: 60px 0; }
+    @media screen and (min-width: 480px) {
+      .event__outer-container {
+        padding: 60px 20px; } }
+    @media screen and (min-width: 768px) {
+      .event__outer-container {
+        padding: 60px 80px; } }
   .event__img {
     width: 100%;
     margin: auto; }
   .event__post {
-    margin: 50px 0;
+    padding: 40px 20px;
     text-align: center; }
+    @media screen and (min-width: 480px) {
+      .event__post {
+        padding: 50px 0; } }
   .event__post-title {
     margin-bottom: 20px;
     font-size: 1.8rem;
@@ -909,13 +925,23 @@ html, body {
   .event__post-info {
     margin: 20px auto;
     letter-spacing: 1px; }
-  .event__post-info, .event__info-element {
+  .event__post-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (min-width: 480px) {
+      .event__post-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: end; } }
+  .event__info-element {
+    margin: 5px 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: end; }
-  .event__info-element {
-    margin: 0 10px; }
   .event__icon {
     margin-right: 5px; }
   .event__copy {
@@ -924,9 +950,15 @@ html, body {
   .event__buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: initial;
     margin-top: 20px; }
+    @media screen and (min-width: 480px) {
+      .event__buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: initial; } }
   .event__button {
     outline: none;
     background-color: transparent;
@@ -934,7 +966,7 @@ html, body {
     color: black;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 8px 40px;
+    padding: 10px;
     position: relative;
     transition: all 0.3s ease; }
     .event__button:hover {
@@ -944,3 +976,6 @@ html, body {
       color: #e60600;
       border-color: #e60600;
       left: 2px; }
+    @media screen and (min-width: 480px) {
+      .event__button {
+        padding: 8px 40px; } }
