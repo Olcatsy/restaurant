@@ -655,7 +655,7 @@ html, body {
   .hero__headline {
     margin: 0;
     font-family: Aguafina Script;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 500; }
     @media screen and (min-width: 480px) {
       .hero__headline {
@@ -700,12 +700,18 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-right: 20px; }
+    text-align: center; }
+    @media screen and (min-width: 1000px) {
+      .about__left {
+        margin-right: 20px; } }
   .about__underline {
     margin: 20px auto; }
   .about__right {
-    margin-left: 20px; }
+    margin-left: 20px;
+    display: none; }
+    @media screen and (min-width: 1000px) {
+      .about__right {
+        display: inline-block; } }
   .about_img {
     max-width: 456px; }
 
@@ -715,9 +721,9 @@ html, body {
   padding-top: 40px;
   /* SPECIALS - Cutlery background*/ }
   .specials__outer-container {
-    height: 69vh;
+    height: 75vh;
     background-image: url("../assets/home/specials-border.png");
-    background-size: 100% 65vh;
+    background-size: 100% 75vh;
     background-repeat: no-repeat; }
   .specials__title {
     text-align: center; }
@@ -763,10 +769,11 @@ html, body {
       border-color: #e60600;
       left: 2px; }
   .specials__cutlery {
-    height: 210px;
+    /* consider adding this a part of html */
+    min-height: 85px;
     background-image: url("../assets/home/cutlery.png");
     background-size: contain;
-    background-position-x: 100px;
+    background-position: center;
     background-repeat: no-repeat; }
 
 /* 4. RESERVATIONS */

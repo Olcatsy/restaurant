@@ -26,7 +26,7 @@
   &__headline {
     margin: 0;
     font-family: Aguafina Script;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 500;
 
     @include min-width($phone-lnd) {
@@ -86,7 +86,11 @@
   &__left {
     @include flexbox(column, center, center);
     text-align: center;
-    margin-right: 20px;
+
+      @include min-width(1000px) {
+        margin-right: 20px;
+      }
+
   }
 
   &__underline {
@@ -100,6 +104,11 @@
   /* ABOUT - Right */
   &__right {
     margin-left: 20px;
+    display: none;
+
+      @include min-width(1000px) {
+        display: inline-block;
+      }
   }
 
   &_img {
@@ -116,10 +125,10 @@
 
   &__outer-container {
     @extend %outer-container;
-    height: 69vh;
+    height: 75vh;
 
     background-image: url('../assets/home/specials-border.png');
-    background-size: 100% 65vh;
+    background-size: 100% 75vh;
     background-repeat: no-repeat;
   }
 
@@ -170,11 +179,12 @@
 
   /* SPECIALS - Cutlery background*/
   &__cutlery {
+    /* consider adding this a part of html */
     @extend %outer-container;
-    height: 210px;
+    min-height: 85px;
     background-image: url('../assets/home/cutlery.png');
     background-size: contain;
-    background-position-x: 100px;
+    background-position: center;
     background-repeat: no-repeat;
 
   }
