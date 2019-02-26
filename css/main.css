@@ -534,14 +534,14 @@ html, body {
   .footer__middle .footer__outer-container {
     padding: 45px 20px;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 30px;
-    justify-content: center; }
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 30px; }
     @media screen and (min-width: 768px) {
       .footer__middle .footer__outer-container {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px; } }
+        grid-gap: 50px;
+        justify-content: center; } }
   .footer__column-title {
     grid-area: header;
     margin-bottom: 15px; }
@@ -628,19 +628,16 @@ html, body {
       margin: 0 15px;
       outline: none; }
       .footer__social-button:hover {
-        background-color: #0d0d0d;
-        width: 55px;
-        height: 55px; }
+        background-color: #0d0d0d; }
       .footer__social-button:active {
-        background-color: #1a1a1a;
-        width: 55px;
-        height: 55px; }
+        background-color: #1a1a1a; }
 
 /* 1. HERO */
 .hero {
   background: url("../assets/home/restaurant-hero-bg.jpg") fixed;
   background-size: cover;
-  height: 70vh;
+  background-position: center;
+  height: 100vh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -658,8 +655,11 @@ html, body {
   .hero__headline {
     margin: 0;
     font-family: Aguafina Script;
-    font-size: 5rem;
+    font-size: 2.2rem;
     font-weight: 500; }
+    @media screen and (min-width: 480px) {
+      .hero__headline {
+        font-size: 5rem; } }
   .hero__subhead-container {
     display: flex;
     flex-direction: row;
@@ -667,7 +667,10 @@ html, body {
     align-items: center; }
   .hero__subhead {
     text-transform: uppercase;
-    font-size: 1.2rem; }
+    font-size: 1rem; }
+    @media screen and (min-width: 480px) {
+      .hero__subhead {
+        font-size: 1.2rem; } }
   .hero__subhead-item {
     margin: 0 10px; }
   .hero__dash {
@@ -874,7 +877,6 @@ html, body {
     flex-direction: row;
     justify-content: initial;
     align-items: initial;
-    /*width: 100vw;*/
     align-items: baseline; }
   .menu-section__img {
     /*Try to add a third photo for phone-lnd layout*/
@@ -898,10 +900,9 @@ html, body {
 
 .event {
   /* Main post */
-  /* Line height should be a Typography mixin */
   /* End of Main post */ }
   .event__outer-container {
-    padding: 60px 0; }
+    padding: 35px 0; }
     @media screen and (min-width: 480px) {
       .event__outer-container {
         padding: 60px 20px; } }
@@ -910,9 +911,13 @@ html, body {
         padding: 60px 80px; } }
   .event__img {
     width: 100%;
-    margin: auto; }
+    margin: auto;
+    padding: 0 20px; }
+    @media screen and (min-width: 480px) {
+      .event__img {
+        padding: 0; } }
   .event__post {
-    padding: 40px 20px;
+    padding: 35px 20px;
     text-align: center; }
     @media screen and (min-width: 480px) {
       .event__post {
@@ -924,8 +929,7 @@ html, body {
     text-transform: capitalize; }
   .event__post-info {
     margin: 20px auto;
-    letter-spacing: 1px; }
-  .event__post-info {
+    letter-spacing: 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -946,7 +950,8 @@ html, body {
     margin-right: 5px; }
   .event__copy {
     margin: 30px 0;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    text-align: justify; }
   .event__buttons {
     display: flex;
     flex-direction: row;
@@ -966,7 +971,7 @@ html, body {
     color: black;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 15px;
     position: relative;
     transition: all 0.3s ease; }
     .event__button:hover {

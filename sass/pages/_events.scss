@@ -2,30 +2,35 @@
 
   &__outer-container {
     @extend %outer-container;
-    padding: 60px 0;
+    padding: 35px 0;
 
-    @include min-width($phone-lnd) {
-      padding: 60px 20px;
-    }
+      @include min-width($phone-lnd) {
+        padding: 60px 20px;
+      }
 
-    @include min-width($tablet) {
-      padding: 60px 80px;
-    }
+      @include min-width($tablet) {
+        padding: 60px 80px;
+      }
   }
 
   &__img {
     width: 100%;
     margin: auto;
+    padding: 0 20px;
+
+      @include min-width($phone-lnd) {
+        padding: 0;
+      }
   }
 
   /* Main post */
   &__post {
-    padding: 40px 20px;
+    padding: 35px 20px;
     text-align: center;
 
-    @include min-width($phone-lnd) {
-      padding: 50px 0;
-    }
+      @include min-width($phone-lnd) {
+        padding: 50px 0;
+      }
   }
 
   &__post-title {
@@ -38,15 +43,12 @@
   &__post-info {
     margin: 20px auto;
     letter-spacing: 1px;
-  }
 
-  &__post-info {
     @include flexbox(column, center, center);
 
-    @include min-width($phone-lnd) {
-      @include flexbox(row, center, end);
-    }
-
+      @include min-width($phone-lnd) {
+        @include flexbox(row, center, end);
+      }
   }
 
   &__info-element {
@@ -63,29 +65,27 @@
     @extend %underline;
   }
 
-  /* Line height should be a Typography mixin */
   &__copy {
     margin: 30px 0;
     line-height: 1.5em;
+    text-align: justify;
   }
-
   /* End of Main post */
 
   &__buttons {
     @include flexbox(row, space-around);
     margin-top: 20px;
 
-    @include min-width($phone-lnd) {
-      @include flexbox(row, space-between);
-    }
-
+      @include min-width($phone-lnd) {
+        @include flexbox(row, space-between);
+      }
   }
 
   &__button {
-    @include black-outline(10px);
+    @include black-outline(15px);
 
-    @include min-width($phone-lnd) {
-      padding: 8px 40px;
-    }
+      @include min-width($phone-lnd) {
+        padding: 8px 40px;
+      }
   }
 }

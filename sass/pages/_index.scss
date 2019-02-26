@@ -2,7 +2,8 @@
 .hero {
   background: url('../assets/home/restaurant-hero-bg.jpg') fixed;
   background-size: cover;
-  height: 70vh;
+  background-position: center;
+  height: 100vh;
   color: white;
 
   @include flexbox(column, center, center);
@@ -25,8 +26,12 @@
   &__headline {
     margin: 0;
     font-family: Aguafina Script;
-    font-size: 5rem;
+    font-size: 2.2rem;
     font-weight: 500;
+
+    @include min-width($phone-lnd) {
+      font-size: 5rem;
+    }
   }
 
   /* HERO - Subhead */
@@ -36,7 +41,11 @@
 
   &__subhead {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
+
+    @include min-width($phone-lnd) {
+      font-size: 1.2rem;
+    }
   }
 
   &__subhead-item {

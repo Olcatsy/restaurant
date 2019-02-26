@@ -12,25 +12,23 @@
   &__top {
     background-color: $black;
     color: $light-grey;
-
-    @include min-width($tablet) {}
   }
 
   &__welcome {
     display: none;
 
-    @include min-width($tablet) {
-      display: inline-block;
-    }
+      @include min-width($tablet) {
+        display: inline-block;
+      }
   }
 
   &__contact-item {
     padding: 0 20px;
     display: none;
 
-    @include min-width($tablet) {
-      display: inline-block;
-    }
+      @include min-width($tablet) {
+        display: inline-block;
+      }
   }
 
   &__icon {
@@ -39,14 +37,10 @@
     position: relative;
     bottom: -1px;
     padding: 0 6px;
-
-    @include min-width($tablet) {}
   }
 
   &__search {
     display: inline-block;
-
-    @include min-width($tablet) {}
 
     &-button {
       background-color: transparent;
@@ -54,8 +48,6 @@
       border: none;
       min-width: 50px;
       min-height: 50px;
-
-      @include min-width($tablet) {}
     }
 
     &-field {
@@ -66,8 +58,6 @@
       border-radius: 7px;
       width: 0;
       transition: width 1s ease;
-
-      @include min-width($tablet) {}
     }
 
     &:focus-within {
@@ -83,20 +73,14 @@
     background-color: $black-transparent;
     color: $white;
     padding: 15px 0;
-
-    @include min-width($tablet) {}
   }
 
   &__nav-list {
     padding: 0;
-
-    @include min-width($tablet) {}
   }
 
   &__nav-item {
     display: inline-block;
-
-    @include min-width($tablet) {}
   }
 
   &__nav-link {
@@ -106,9 +90,8 @@
     Otherwise the links overlap*/
     padding: 15px;
 
-    @include min-width($tablet) {
-      padding: 0 15px;
-    }
+      @include min-width($tablet) {
+        padding: 0 15px;
+      }
   }
-
 }

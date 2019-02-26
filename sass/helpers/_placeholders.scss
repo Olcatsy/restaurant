@@ -1,15 +1,15 @@
 %outer-container {
   padding: 0 20px;
 
-  @include min-width($tablet) {
-    margin: auto;
-    max-width: 1000px;
-  }
+    @include min-width($tablet) {
+      margin: auto;
+      max-width: 1000px;
+    }
 
-  @include min-width($desktop) {
-    margin: auto;
-    max-width: 1200px;
-  }
+    @include min-width($desktop) {
+      margin: auto;
+      max-width: 1200px;
+    }
 }
 
 
@@ -18,7 +18,7 @@
   width: 100%;
   margin: 0 auto 15px auto;
 
-  @include min-width($phone-lnd) {
-    width: initial;
-  }
+    @include min-width($phone-lnd) {
+      width: initial;
+    }
 }

@@ -56,13 +56,9 @@
 
     &:hover {
       background-color: lighten($background, 5%);
-      width: 55px;
-      height: 55px;
     }
 
     &:active {
       background-color: lighten($background, 10%);
-      width: 55px;
-      height: 55px;
     }
 }

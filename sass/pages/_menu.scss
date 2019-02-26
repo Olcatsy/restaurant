@@ -1,45 +1,37 @@
 .menu-section {
 
-  &__menu {}
-
   &__outer-container {
     @extend %outer-container;
     padding: 50px;
 
-    @include min-width($tablet) {
-      padding: 60px 20px;
-    }
+      @include min-width($tablet) {
+        padding: 60px 20px;
+      }
   }
 
   &__title {
     text-transform: uppercase;
     margin: 15px 0;
-
-    @include min-width($tablet) {}
   }
 
   &__menu-list {
     @include flexbox(column, center, center);
 
-    @include min-width($tablet) {
-      @include flexbox(row, space-between);
-    }
+      @include min-width($tablet) {
+        @include flexbox(row, space-between);
+      }
   }
 
   &__copy--big {
     text-transform: capitalize;
     font-size: 1.4rem;
     margin-top: 20px;
-
-    @include min-width($tablet) {}
   }
 
   &__copy {
     padding-left: 5px;
     font-style: italic;
     font-size: 1.1rem;
-
-    @include min-width($tablet) {}
   }
 
 
@@ -47,11 +39,7 @@
   &__gallery {
     @include flexbox(row);
 
-    /*width: 100vw;*/
     align-items: baseline;
-
-
-    @include min-width($tablet) {}
   }
 
   &__img {
@@ -61,26 +49,26 @@
     &:nth-child(n+3) {
       display: none;
 
-      @include min-width($tablet) {
-        display: inline-block;
-      }
+        @include min-width($tablet) {
+          display: inline-block;
+        }
     }
 
     &:nth-child(n+4) {
       display: none;
 
-      @include min-width($laptop) {
-        display: inline-block;
+        @include min-width($laptop) {
+          display: inline-block;
       }
     }
 
-    @include min-width($tablet) {
-      width: 33.3%;
-    }
+      @include min-width($tablet) {
+        width: 33.3%;
+      }
 
-    @include min-width($laptop) {
-      width: 25%;
-    }
+      @include min-width($laptop) {
+        width: 25%;
+      }
 
   }
   /* End of GALLERY */

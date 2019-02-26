@@ -27,9 +27,9 @@
     padding: 15px;
     font-size: 1.3rem;
 
-    @include min-width($tablet) {
-      padding: 0 10px;
-      font-size: 1rem;
-    }
+      @include min-width($tablet) {
+        padding: 0 10px;
+        font-size: 1rem;
+      }
   }
 }
