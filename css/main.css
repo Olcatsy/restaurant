@@ -366,14 +366,14 @@ these breakpoints are used with min-width*/
 /* FLEXBOX */
 /* FORM FIELD */
 /* MEDIA QUERIES */
-.banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
+.banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
   padding: 0 20px; }
   @media screen and (min-width: 768px) {
-    .banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
+    .banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
       margin: auto;
       max-width: 1000px; } }
   @media screen and (min-width: 1600px) {
-    .banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .specials__cutlery, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
+    .banner__outer-container, .header__outer-container, .footer__outer-container, .hero__outer-container, .about__outer-container, .specials__outer-container, .reservations__outer-container, .services__outer-container, .menu-section__outer-container, .event__outer-container {
       margin: auto;
       max-width: 1200px; } }
 
@@ -700,7 +700,8 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
     @media screen and (min-width: 1000px) {
       .about__left {
         margin-right: 20px; } }
@@ -718,22 +719,32 @@ html, body {
 /* 3. SPECIALS */
 .specials {
   background-color: #f2f2f2;
-  padding-top: 40px;
   /* SPECIALS - Cutlery background*/ }
+  @media screen and (min-width: 1000px) {
+    .specials {
+      padding-top: 50px; } }
   .specials__outer-container {
-    height: 75vh;
-    background-image: url("../assets/home/specials-border.png");
-    background-size: 100% 75vh;
-    background-repeat: no-repeat; }
+    padding: 50px 0; }
+    @media screen and (min-width: 1000px) {
+      .specials__outer-container {
+        height: 75vh;
+        background-image: url("../assets/home/specials-border.png");
+        background-size: 100% 75vh;
+        background-repeat: no-repeat; } }
   .specials__title {
     text-align: center; }
   .specials__menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 100px;
-    padding: 60px 0;
+    padding: 40px 0;
     margin: auto;
-    width: 75%; }
+    width: 75%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 50px; }
+    @media screen and (min-width: 768px) {
+      .specials__menu {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 100px; } }
   .specials__course {
     display: grid;
     grid-template-columns: auto 10%;
@@ -768,47 +779,70 @@ html, body {
       color: #e60600;
       border-color: #e60600;
       left: 2px; }
-  .specials__cutlery {
-    /* consider adding this a part of html */
-    min-height: 85px;
-    background-image: url("../assets/home/cutlery.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; }
+  @media screen and (min-width: 768px) {
+    .specials__cutlery {
+      min-height: 210px;
+      background-image: url("../assets/home/cutlery.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat; } }
 
 /* 4. RESERVATIONS */
 .reservations {
   background: url(../assets/reso-background.jpg) no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 45px 0;
+  padding: 50px 0;
   text-align: center; }
   .reservations__title, .reservations__copy {
     color: #fff; }
   .reservations__form {
+    margin: 40px 0;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10px;
-    margin: 40px 0; }
+    grid-gap: 30px;
+    justify-items: center; }
+    @media screen and (min-width: 768px) {
+      .reservations__form {
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10px; } }
     .reservations__form-top {
+      width: 80%;
       display: grid;
-      grid-template-columns: 33% repeat(2, 1fr);
-      grid-gap: 10px;
-      align-content: center; }
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 30px; }
+      @media screen and (min-width: 768px) {
+        .reservations__form-top {
+          width: 100%;
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: 33% repeat(2, 1fr);
+          grid-gap: 10px;
+          align-content: center; } }
     .reservations__form-bottom {
+      width: 80%;
       display: grid;
-      grid-template-columns: 33% auto auto 15%;
-      grid-gap: 10px;
-      align-content: center; }
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 30px; }
+      @media screen and (min-width: 768px) {
+        .reservations__form-bottom {
+          width: 100%;
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: 33% auto auto 15%;
+          grid-gap: 10px;
+          align-content: center; } }
   .reservations__field {
     color: black;
-    padding: 10px;
+    padding: 15px;
     outline: none;
     border: 1px solid transparent;
     transition: all 0.3s ease;
     font-style: italic; }
     .reservations__field:focus {
       border: 1px solid #ff524d; }
+    @media screen and (min-width: 768px) {
+      .reservations__field {
+        padding: 10px; } }
   .reservations__button {
     outline: none;
     background-color: #ff524d;
@@ -827,16 +861,23 @@ html, body {
 
 /* 5. SERVICES */
 .services {
-  padding: 45px 0;
+  padding: 50px 0;
   text-align: center;
   background-color: #f2f2f2; }
   .services__copy {
-    width: 50%;
     margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      .services__copy {
+        width: 50%; } }
   .services__inner-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 15px; }
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px; }
+    @media screen and (min-width: 768px) {
+      .services__inner-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr; } }
   .services__item {
     background-color: white;
     height: 130px;

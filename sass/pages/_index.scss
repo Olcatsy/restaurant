@@ -86,6 +86,7 @@
   &__left {
     @include flexbox(column, center, center);
     text-align: center;
+    width: 100%;
 
       @include min-width(1000px) {
         margin-right: 20px;
@@ -121,15 +122,23 @@
 /* 3. SPECIALS */
 .specials {
   background-color: $light-grey;
-  padding-top: 40px;
+
+    @include min-width(1000px) {
+      padding-top: 50px;
+    }
+
 
   &__outer-container {
     @extend %outer-container;
-    height: 75vh;
+    padding: 50px 0;
 
-    background-image: url('../assets/home/specials-border.png');
-    background-size: 100% 75vh;
-    background-repeat: no-repeat;
+
+      @include min-width(1000px) {
+        height: 75vh;
+        background-image: url('../assets/home/specials-border.png');
+        background-size: 100% 75vh;
+        background-repeat: no-repeat;
+      }
   }
 
   &__title {
@@ -138,13 +147,19 @@
   }
 
   &__menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 100px;
-
-    padding: 60px 0;
+    padding: 40px 0;
     margin: auto;
     width: 75%;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 50px;
+
+      @include min-width($tablet) {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 100px;
+      }
   }
 
   &__course {
@@ -179,13 +194,14 @@
 
   /* SPECIALS - Cutlery background*/
   &__cutlery {
-    /* consider adding this a part of html */
-    @extend %outer-container;
-    min-height: 85px;
-    background-image: url('../assets/home/cutlery.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+      @include min-width($tablet) {
+        min-height: 210px;
+        background-image: url('../assets/home/cutlery.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
 
   }
 
@@ -198,7 +214,7 @@
   background: $dark-background no-repeat;
   background-size: cover;
   color: $white;
-  padding: 45px 0;
+  padding: 50px 0;
   text-align: center;
 
   &__outer-container {
@@ -218,29 +234,60 @@
   }
 
   &__form {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10px;
     margin: 40px 0;
 
+    display: grid;
+    grid-gap: 30px;
+    justify-items: center;
+
+      @include min-width($tablet) {
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10px;
+      }
+
     &-top {
+      width: 80%;
       display: grid;
-      grid-template-columns: 33% repeat(2, 1fr);
-      grid-gap: 10px;
-      align-content: center;
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 30px;
+
+        @include min-width($tablet) {
+          width: 100%;
+
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: 33% repeat(2, 1fr);
+          grid-gap: 10px;
+          align-content: center;
+        }
     }
 
     &-bottom {
+      width: 80%;
+
       display: grid;
-      grid-template-columns: 33% auto auto 15%;
-      grid-gap: 10px;
-      align-content: center;
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 30px;
+
+        @include min-width($tablet) {
+          width: 100%;
+
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: 33% auto auto 15%;
+          grid-gap: 10px;
+          align-content: center;
+        }
     }
   }
 
   &__field {
-    @include form-field($black, 10px, $red);
+    @include form-field($black, 15px, $red);
     font-style: italic;
+
+      @include min-width($tablet) {
+        padding: 10px;
+      }
   }
 
   &__button {
@@ -254,7 +301,7 @@
 
 /* 5. SERVICES */
 .services {
-  padding: 45px 0;
+  padding: 50px 0;
   text-align: center;
   background-color: $light-grey;
 
@@ -271,15 +318,26 @@
   }
 
   &__copy {
-    width: 50%;
     margin: 0 auto;
+
+      @include min-width($tablet) {
+            width: 50%;
+      }
   }
 
   &__inner-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 15px;
-  }
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+
+
+      @include min-width($tablet) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+      }
+      }
+
 
   &__item {
     background-color: white;
